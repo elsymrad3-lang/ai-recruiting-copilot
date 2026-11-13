@@ -1,0 +1,4053 @@
+{
+  "description": "Answer key for the fictional recruiting demo. All people, companies and schools are fictional.",
+  "reference_date": "2026-11-04",
+  "file_count": 60,
+  "person_count": 55,
+  "transcripts": [
+    {
+      "file": "transcripts/Brightwell Dental Studios - GHL Automation Specialist.txt",
+      "role": "GHL Automation Specialist",
+      "client": "Brightwell Dental Studios",
+      "changed_mind": "part-time 20h -> full-time; Arabic nice-to-have -> required",
+      "missing": [
+        "pay rate"
+      ],
+      "final_needs": "3+ yrs GoHighLevel, Arabic required, full-time, ASAP"
+    },
+    {
+      "file": "transcripts/Hollis Crane Advisory - Executive Virtual Assistant.txt",
+      "role": "Executive Virtual Assistant",
+      "client": "Hollis Crane Advisory",
+      "changed_mind": "US Eastern hours -> US Pacific hours",
+      "missing": [
+        "pay rate",
+        "exact start date"
+      ],
+      "final_needs": "has supported a CEO/founder, travel booking, Google Workspace, Notion, Pacific hours, full-time"
+    },
+    {
+      "file": "transcripts/Fernhill Coffee Roasters - QuickBooks Bookkeeper.txt",
+      "role": "QuickBooks Bookkeeper",
+      "client": "Fernhill Coffee Roasters",
+      "changed_mind": "QuickBooks Desktop -> QuickBooks Online",
+      "missing": [
+        "pay/budget",
+        "weekly hours"
+      ],
+      "final_needs": "QuickBooks Online, 5+ years, catch-up work, Shopify payouts; Gusto and ProAdvisor are pluses"
+    },
+    {
+      "file": "transcripts/Luma Yoga Collective - Social Media Manager.txt",
+      "role": "Social Media Manager",
+      "client": "Luma Yoga Collective",
+      "changed_mind": "Instagram + TikTok -> Instagram + LinkedIn",
+      "missing": [
+        "pay rate",
+        "posting volume"
+      ],
+      "final_needs": "Instagram + LinkedIn, Reels in CapCut, Canva, 2+ years, part-time 25-30h"
+    },
+    {
+      "file": "transcripts/Kettle & Kite Home Goods - Customer Support Agent.txt",
+      "role": "Customer Support Agent",
+      "client": "Kettle & Kite Home Goods",
+      "changed_mind": "Zendesk -> Gorgias",
+      "missing": [
+        "pay rate",
+        "shift"
+      ],
+      "final_needs": "two agents, Gorgias + Shopify, email and chat, 1+ year e-commerce support, full-time"
+    }
+  ],
+  "files": [
+    {
+      "file": "cvs/Resume - Karim Abdelrahman.pdf",
+      "person_id": "cand01",
+      "full_name": "Karim Abdelrahman",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "pdf",
+      "layout": "compact",
+      "last_updated": "2026-03-07",
+      "email": "elsymrad3+cand01@gmail.com",
+      "phone": "+20 152 453 8451",
+      "location": "Cairo, Egypt",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Webhooks & API integrations",
+        "Stripe",
+        "WordPress",
+        "Funnel building",
+        "ClickFunnels",
+        "Twilio / LC Phone"
+      ],
+      "skills_as_written": [
+        "GHL (4 yrs)",
+        "Webhooks & API integrations",
+        "Stripe",
+        "WordPress",
+        "Funnel building",
+        "ClickFunnels",
+        "Twilio / LC Phone"
+      ],
+      "ghl_years": 4,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "GHL Workflow Builder",
+          "company": "Sablewood Digital",
+          "start": "2024-06",
+          "end": "present"
+        },
+        {
+          "title": "Junior GHL Specialist",
+          "company": "Juniperra Med Spa",
+          "start": "2021-10",
+          "end": "2024-05"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Nettlefield Logistics",
+          "start": "2020-11",
+          "end": "2021-09"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/lina.haddad.resume.pdf",
+      "person_id": "cand02",
+      "full_name": "Lina Haddad",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "pdf",
+      "layout": "banner",
+      "last_updated": "2025-10-15",
+      "email": "elsymrad3+cand02@gmail.com",
+      "phone": "+962 77 655 4397",
+      "location": "Amman, Jordan",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Workflow automation",
+        "CRM pipeline design",
+        "Google Sheets",
+        "Stripe",
+        "Twilio / LC Phone",
+        "ClickFunnels",
+        "Webhooks & API integrations",
+        "Calendly",
+        "Make.com"
+      ],
+      "skills_as_written": [
+        "GoHighLevel (5 yrs)",
+        "Workflow automation",
+        "CRM pipeline design",
+        "Google Sheets",
+        "Stripe",
+        "Twilio / LC Phone",
+        "ClickFunnels",
+        "Webhooks & API integrations",
+        "Calendly",
+        "Make (Integromat)"
+      ],
+      "ghl_years": 5,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Marketing Automation Specialist",
+          "company": "Orchardine Digital",
+          "start": "2022-10",
+          "end": "present"
+        },
+        {
+          "title": "CRM Automation Assistant",
+          "company": "Quillon Coaching",
+          "start": "2020-08",
+          "end": "2022-09"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Nettlefield Foods",
+          "start": "2018-07",
+          "end": "2020-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Benali Youssef 2026.docx",
+      "person_id": "cand03",
+      "full_name": "Youssef Benali",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2026-05-26",
+      "email": "elsymrad3+cand03@gmail.com",
+      "phone": "+212 668-936025",
+      "location": "Casablanca, Morocco",
+      "languages": [
+        "Arabic",
+        "French",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "French": "Fluent",
+        "English": "Professional"
+      },
+      "skills": [
+        "GoHighLevel",
+        "CRM pipeline design",
+        "Zapier",
+        "Funnel building",
+        "ClickFunnels",
+        "Google Sheets"
+      ],
+      "skills_as_written": [
+        "Go High Level (6 yrs)",
+        "CRM pipeline design",
+        "Zapier",
+        "Funnel building",
+        "ClickFunnels",
+        "Google Sheets"
+      ],
+      "ghl_years": 6,
+      "years_experience": 6,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Marketing Automation Specialist",
+          "company": "Lumenwick Roofing Co.",
+          "start": "2024-06",
+          "end": "present"
+        },
+        {
+          "title": "CRM Automation Assistant",
+          "company": "Tamsinvale Coaching",
+          "start": "2019-11",
+          "end": "2024-05"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Ostravia Trading",
+          "start": "2018-05",
+          "end": "2019-08"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Dimaculangan_J_cv_final.docx",
+      "person_id": "cand04",
+      "full_name": "Joanna Dimaculangan",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2024-12-29",
+      "email": "elsymrad3+cand04@gmail.com",
+      "phone": "+63 961 604 5342",
+      "location": "Cebu City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Mailgun email setup",
+        "Google Sheets",
+        "WordPress",
+        "Webhooks & API integrations",
+        "ClickFunnels",
+        "CRM pipeline design",
+        "Make.com"
+      ],
+      "skills_as_written": [
+        "HighLevel (4 yrs)",
+        "Mailgun email setup",
+        "Google Sheets",
+        "WordPress",
+        "Webhooks & API integrations",
+        "ClickFunnels",
+        "CRM pipeline design",
+        "Integromat / Make"
+      ],
+      "ghl_years": 4,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "HighLevel Automation Specialist",
+          "company": "Sablewood Roofing Co.",
+          "start": "2022-08",
+          "end": "present"
+        },
+        {
+          "title": "CRM Automation Assistant",
+          "company": "Vellumark Growth Agency",
+          "start": "2020-10",
+          "end": "2022-07"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Driftmoor Trading",
+          "start": "2018-01",
+          "end": "2020-06"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/MarkVillanueva-Resume.docx",
+      "person_id": "cand05",
+      "full_name": "Mark Anthony Villanueva",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2026-04-24",
+      "email": "elsymrad3+cand05@gmail.com",
+      "phone": "+63 984 388 3068",
+      "location": "Davao City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Mailgun email setup",
+        "CRM pipeline design",
+        "ClickFunnels",
+        "Stripe",
+        "Zapier",
+        "WordPress",
+        "Twilio / LC Phone",
+        "Webhooks & API integrations"
+      ],
+      "skills_as_written": [
+        "GHL (5 yrs)",
+        "Mailgun email setup",
+        "CRM pipeline design",
+        "ClickFunnels",
+        "Stripe",
+        "Zapier",
+        "WordPress",
+        "Twilio / LC Phone",
+        "Webhooks & API integrations"
+      ],
+      "ghl_years": 5,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Marketing Automation Specialist",
+          "company": "Callowmere Coaching",
+          "start": "2023-08",
+          "end": "present"
+        },
+        {
+          "title": "Junior GHL Specialist",
+          "company": "Umberleigh Growth Agency",
+          "start": "2021-01",
+          "end": "2023-07"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Sablewood Retail",
+          "start": "2019-07",
+          "end": "2020-11"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Santiago_Restrepo_CV.docx",
+      "person_id": "cand06",
+      "full_name": "Santiago Restrepo",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2025-08-13",
+      "email": "elsymrad3+cand06@gmail.com",
+      "phone": "+57 302 703 5037",
+      "location": "Medellín, Colombia",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Webhooks & API integrations",
+        "Funnel building",
+        "ClickFunnels",
+        "Zapier",
+        "Twilio / LC Phone",
+        "Stripe",
+        "Workflow automation",
+        "CRM pipeline design"
+      ],
+      "skills_as_written": [
+        "GoHighLevel (4 yrs)",
+        "Webhooks & API integrations",
+        "Funnel building",
+        "ClickFunnels",
+        "Zapier",
+        "Twilio / LC Phone",
+        "Stripe",
+        "Workflow automation",
+        "CRM pipeline design"
+      ],
+      "ghl_years": 4,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "GoHighLevel Workflow Builder",
+          "company": "Umberleigh Roofing Co.",
+          "start": "2021-04",
+          "end": "present"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Juniperra Call Center Services",
+          "start": "2018-10",
+          "end": "2021-01"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Resume - Nourhan Sabry.docx",
+      "person_id": "cand07",
+      "full_name": "Nourhan Sabry",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2026-10-19",
+      "email": "elsymrad3+cand07@gmail.com",
+      "phone": "+20 105 454 8431",
+      "location": "Alexandria, Egypt",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "WordPress",
+        "Funnel building",
+        "Webhooks & API integrations",
+        "ClickFunnels",
+        "Twilio / LC Phone"
+      ],
+      "skills_as_written": [
+        "Go High Level (1 yr)",
+        "WordPress",
+        "Funnel building",
+        "Webhooks & API integrations",
+        "ClickFunnels",
+        "Twilio / LC Phone"
+      ],
+      "ghl_years": 1,
+      "years_experience": 1,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Go High Level Workflow Builder",
+          "company": "Yarrowby Roofing Co.",
+          "start": "2025-09",
+          "end": "present"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Emberlyn Foods",
+          "start": "2024-06",
+          "end": "2025-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/tariq.masri.resume.docx",
+      "person_id": "cand08",
+      "full_name": "Tariq Al-Masri",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2026-06-16",
+      "email": "elsymrad3+cand08@gmail.com",
+      "phone": "+962 79 540 9969",
+      "location": "Irbid, Jordan",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Webhooks & API integrations",
+        "Funnel building",
+        "Mailgun email setup",
+        "ClickFunnels",
+        "Stripe",
+        "Zapier"
+      ],
+      "skills_as_written": [
+        "HighLevel (2 yrs)",
+        "Webhooks & API integrations",
+        "Funnel building",
+        "Mailgun email setup",
+        "ClickFunnels",
+        "Stripe",
+        "Zapier"
+      ],
+      "ghl_years": 2,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "HighLevel Automation Specialist",
+          "company": "Bluepeak Coaching",
+          "start": "2024-01",
+          "end": "present"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Callowmere Foods",
+          "start": "2021-08",
+          "end": "2023-12"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Bilal_Qureshi_CV_2025.pdf",
+      "person_id": "cand09",
+      "full_name": "Bilal Qureshi",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "pdf",
+      "layout": "classic",
+      "last_updated": "2025-02-10",
+      "email": "elsymrad3+cand09@gmail.com",
+      "phone": "+92 325 2836613",
+      "location": "Lahore, Pakistan",
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "language_levels": {
+        "Urdu": "Native",
+        "English": "Fluent",
+        "Punjabi": "Conversational"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Mailgun email setup",
+        "Google Sheets",
+        "Twilio / LC Phone",
+        "WordPress",
+        "Stripe",
+        "CRM pipeline design",
+        "Funnel building"
+      ],
+      "skills_as_written": [
+        "GHL (2 yrs)",
+        "Mailgun email setup",
+        "Google Sheets",
+        "Twilio / LC Phone",
+        "WordPress",
+        "Stripe",
+        "CRM pipeline design",
+        "Funnel building"
+      ],
+      "ghl_years": 2,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Marketing Automation Specialist",
+          "company": "Fennix Roofing Co.",
+          "start": "2023-01",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Silverbirch Printing",
+          "start": "2020-04",
+          "end": "2022-10"
+        }
+      ],
+      "messy_case": "updated_older",
+      "related_files": [
+        "cvs/Bilal Qureshi CV - updated.docx"
+      ],
+      "messy_note": "Older CV of a person who also has a newer one. Use the newer file."
+    },
+    {
+      "file": "cvs/Bilal Qureshi CV - updated.docx",
+      "person_id": "cand09",
+      "full_name": "Bilal Qureshi",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2026-08-15",
+      "email": "elsymrad3+cand09@gmail.com",
+      "phone": "+92 325 2836613",
+      "location": "Lahore, Pakistan",
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "language_levels": {
+        "Urdu": "Native",
+        "English": "Fluent",
+        "Punjabi": "Conversational"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Mailgun email setup",
+        "Google Sheets",
+        "Twilio / LC Phone",
+        "WordPress",
+        "Stripe",
+        "CRM pipeline design",
+        "Funnel building",
+        "Make.com"
+      ],
+      "skills_as_written": [
+        "GHL (3 yrs)",
+        "Mailgun email setup",
+        "Google Sheets",
+        "Twilio / LC Phone",
+        "WordPress",
+        "Stripe",
+        "CRM pipeline design",
+        "Funnel building",
+        "Make (Integromat)"
+      ],
+      "ghl_years": 3,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Marketing Automation Specialist",
+          "company": "Fennix Roofing Co.",
+          "start": "2023-01",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Silverbirch Printing",
+          "start": "2020-04",
+          "end": "2022-10"
+        }
+      ],
+      "messy_case": "updated_newer",
+      "related_files": [
+        "cvs/Bilal_Qureshi_CV_2025.pdf"
+      ],
+      "messy_note": "Newer CV of the same person: more years and extra skills compared to the older file."
+    },
+    {
+      "file": "cvs/scan_0047.pdf",
+      "person_id": "cand10",
+      "full_name": "Rhea Macaraeg",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "pdf",
+      "layout": "scanned",
+      "last_updated": "2026-01-19",
+      "email": "elsymrad3+cand10@gmail.com",
+      "phone": "+63 968 350 7544",
+      "location": "Baguio City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Twilio / LC Phone",
+        "WordPress",
+        "ClickFunnels",
+        "Mailgun email setup",
+        "Zapier",
+        "Workflow automation",
+        "Funnel building",
+        "Webhooks & API integrations",
+        "Keap"
+      ],
+      "skills_as_written": [
+        "GoHighLevel (2 yrs)",
+        "Twilio / LC Phone",
+        "WordPress",
+        "ClickFunnels",
+        "Mailgun email setup",
+        "Zapier",
+        "Workflow automation",
+        "Funnel building",
+        "Webhooks & API integrations",
+        "Keap (Infusionsoft)"
+      ],
+      "ghl_years": 2,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "GoHighLevel Workflow Builder",
+          "company": "Lumenwick Digital",
+          "start": "2023-11",
+          "end": "present"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Pinecrest Hollow Foods",
+          "start": "2022-07",
+          "end": "2023-08"
+        }
+      ],
+      "messy_case": "scanned_no_text_layer",
+      "related_files": [],
+      "messy_note": "PDF is a single page image (photocopy look). No extractable text."
+    },
+    {
+      "file": "cvs/RamiKhoury-Resume.docx",
+      "person_id": "cand11",
+      "full_name": "Rami Khoury",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2024-10-27",
+      "email": "elsymrad3+cand11@gmail.com",
+      "phone": "+961 76 195 319",
+      "location": "Beirut, Lebanon",
+      "languages": [
+        "Arabic",
+        "English",
+        "French"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent",
+        "French": "Intermediate"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Zapier",
+        "Workflow automation",
+        "Google Sheets",
+        "Funnel building",
+        "Mailgun email setup",
+        "Calendly",
+        "CRM pipeline design"
+      ],
+      "skills_as_written": [
+        "Go High Level (7 yrs)",
+        "Zapier",
+        "Workflow automation",
+        "Google Sheets",
+        "Funnel building",
+        "Mailgun email setup",
+        "Calendly",
+        "CRM pipeline design"
+      ],
+      "ghl_years": 7,
+      "years_experience": 7,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Go High Level Workflow Builder",
+          "company": "Vellumark Coaching",
+          "start": "2018-05",
+          "end": "present"
+        },
+        {
+          "title": "Junior Go High Level Specialist",
+          "company": "Marrowgate Med Spa",
+          "start": "2017-02",
+          "end": "2018-04"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Redfernly Logistics",
+          "start": "2014-12",
+          "end": "2016-11"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Aditi_Raghavan_CV.docx",
+      "person_id": "cand12",
+      "full_name": "Aditi Raghavan",
+      "role": "ghl",
+      "target_role": "GHL Automation Specialist",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2024-05-19",
+      "email": "elsymrad3+cand12@gmail.com",
+      "phone": "+91 92121 90597",
+      "location": "Pune, India",
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "language_levels": {
+        "Hindi": "Fluent",
+        "English": "Fluent"
+      },
+      "skills": [
+        "GoHighLevel",
+        "Calendly",
+        "Zapier",
+        "Mailgun email setup",
+        "Workflow automation",
+        "CRM pipeline design",
+        "Twilio / LC Phone",
+        "Stripe"
+      ],
+      "skills_as_written": [
+        "HighLevel (2 yrs)",
+        "Calendly",
+        "Zapier",
+        "Mailgun email setup",
+        "Workflow automation",
+        "CRM pipeline design",
+        "Twilio / LC Phone",
+        "Stripe"
+      ],
+      "ghl_years": 2,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "HighLevel Automation Specialist",
+          "company": "Wrenfield Realty Group",
+          "start": "2021-12",
+          "end": "present"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Emberlyn Logistics",
+          "start": "2020-07",
+          "end": "2021-10"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Resume - Camila Ortega.docx",
+      "person_id": "cand13",
+      "full_name": "Camila Ortega",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2025-09-07",
+      "email": "elsymrad3+cand13@gmail.com",
+      "phone": "+52 70 8842 1786",
+      "location": "Guadalajara, Mexico",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "Canva",
+        "Travel booking",
+        "Asana",
+        "Expensify",
+        "Zoom",
+        "Meeting minutes",
+        "Notion",
+        "ClickUp"
+      ],
+      "skills_as_written": [
+        "Canva",
+        "Travel booking",
+        "Asana",
+        "Expensify",
+        "Zoom",
+        "Meeting minutes",
+        "Notion",
+        "ClickUp"
+      ],
+      "ghl_years": 0,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [
+        "supported_ceo"
+      ],
+      "jobs": [
+        {
+          "title": "Executive Assistant to the Founder",
+          "company": "Emberlyn Capital Partners",
+          "start": "2023-10",
+          "end": "present"
+        },
+        {
+          "title": "Administrative Assistant",
+          "company": "Silverbirch Legal Group",
+          "start": "2020-06",
+          "end": "2023-09"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Silverbirch Trading",
+          "start": "2018-12",
+          "end": "2020-05"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/mariam.ezzat.resume.docx",
+      "person_id": "cand14",
+      "full_name": "Mariam Ezzat",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2026-07-04",
+      "email": "elsymrad3+cand14@gmail.com",
+      "phone": "+20 153 411 6935",
+      "location": "Giza, Egypt",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Travel booking",
+        "Canva",
+        "Microsoft 365",
+        "Calendar management",
+        "Asana",
+        "Trello",
+        "Expensify",
+        "GoHighLevel"
+      ],
+      "skills_as_written": [
+        "Travel booking",
+        "Canva Pro",
+        "Microsoft 365",
+        "Calendar management",
+        "Asana",
+        "Trello",
+        "Expensify",
+        "GHL (basic, 1 yr)"
+      ],
+      "ghl_years": 1,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Remote Executive Assistant",
+          "company": "Corvane Ventures",
+          "start": "2025-04",
+          "end": "present"
+        },
+        {
+          "title": "Administrative Assistant",
+          "company": "Juniperra Consulting",
+          "start": "2023-03",
+          "end": "2025-03"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Vellumark Logistics",
+          "start": "2021-08",
+          "end": "2023-01"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Lumbao Patricia 2025.docx",
+      "person_id": "cand15",
+      "full_name": "Patricia Lumbao",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2025-02-16",
+      "email": "elsymrad3+cand15@gmail.com",
+      "phone": "+63 934 841 1518",
+      "location": "Quezon City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Expensify",
+        "Calendar management",
+        "Travel booking",
+        "Canva",
+        "Inbox management",
+        "Trello",
+        "GoHighLevel"
+      ],
+      "skills_as_written": [
+        "Expensify",
+        "Calendar management",
+        "Travel booking",
+        "Canva",
+        "Inbox management",
+        "Trello",
+        "GoHighLevel (basic, 1 yr)"
+      ],
+      "ghl_years": 1,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Virtual Executive Assistant",
+          "company": "Quillon Consulting",
+          "start": "2022-06",
+          "end": "present"
+        },
+        {
+          "title": "Administrative Assistant",
+          "company": "Sablewood Advisory",
+          "start": "2020-06",
+          "end": "2022-05"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Umberleigh Logistics",
+          "start": "2018-04",
+          "end": "2020-05"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Mwangi_H_cv_final.pdf",
+      "person_id": "cand16",
+      "full_name": "Hannah Mwangi",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "pdf",
+      "layout": "banner",
+      "last_updated": "2025-03-02",
+      "email": "elsymrad3+cand16@gmail.com",
+      "phone": "+254 773 480 741",
+      "location": "Nairobi, Kenya",
+      "languages": [
+        "Swahili",
+        "English"
+      ],
+      "language_levels": {
+        "Swahili": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Google Workspace",
+        "Meeting minutes",
+        "Trello",
+        "Travel booking",
+        "Data entry",
+        "Expensify",
+        "ClickUp",
+        "Calendar management"
+      ],
+      "skills_as_written": [
+        "Google Workspace",
+        "Meeting minutes",
+        "Trello",
+        "Travel booking",
+        "Data entry",
+        "Expensify",
+        "ClickUp",
+        "Calendar management"
+      ],
+      "ghl_years": 0,
+      "years_experience": 6,
+      "certifications": [],
+      "flags": [
+        "supported_ceo"
+      ],
+      "jobs": [
+        {
+          "title": "Executive Assistant to the Founder",
+          "company": "Ostravia Consulting",
+          "start": "2018-09",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Pinecrest Hollow Foods",
+          "start": "2017-07",
+          "end": "2018-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/AnaRocha-Resume.docx",
+      "person_id": "cand17",
+      "full_name": "Ana Beatriz Rocha",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2024-11-02",
+      "email": "elsymrad3+cand17@gmail.com",
+      "phone": "+55 95 92161-6463",
+      "location": "Curitiba, Brazil",
+      "languages": [
+        "Portuguese",
+        "English",
+        "Spanish"
+      ],
+      "language_levels": {
+        "Portuguese": "Native",
+        "English": "Fluent",
+        "Spanish": "Basic"
+      },
+      "skills": [
+        "Slack",
+        "Expensify",
+        "Microsoft 365",
+        "Zoom",
+        "Data entry",
+        "Calendar management",
+        "Notion"
+      ],
+      "skills_as_written": [
+        "Slack",
+        "Expensify",
+        "MS Office 365",
+        "Zoom",
+        "Data entry",
+        "Calendar management",
+        "Notion"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Remote Executive Assistant",
+          "company": "Driftmoor Ventures",
+          "start": "2023-10",
+          "end": "present"
+        },
+        {
+          "title": "Administrative Assistant",
+          "company": "Zephyrine Capital Partners",
+          "start": "2021-03",
+          "end": "2023-09"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Quillon Foods",
+          "start": "2019-07",
+          "end": "2020-11"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Resume - Salma Tawfik.pdf",
+      "person_id": "cand18",
+      "full_name": "Salma Tawfik",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "pdf",
+      "layout": "banner",
+      "last_updated": "2026-03-03",
+      "email": "elsymrad3+cand18@gmail.com",
+      "phone": "+20 151 668 1668",
+      "location": "Cairo, Egypt",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Travel booking",
+        "Microsoft 365",
+        "Inbox management",
+        "Trello",
+        "ClickUp",
+        "Expensify",
+        "Meeting minutes",
+        "Google Workspace"
+      ],
+      "skills_as_written": [
+        "Travel booking",
+        "MS Office 365",
+        "Inbox management",
+        "Trello",
+        "ClickUp",
+        "Expensify",
+        "Meeting minutes",
+        "G Suite"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Virtual Executive Assistant",
+          "company": "Silverbirch Legal Group",
+          "start": "2021-10",
+          "end": "present"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Fennix Call Center Services",
+          "start": "2020-06",
+          "end": "2021-09"
+        }
+      ],
+      "messy_case": "duplicate_diff_email_same_phone",
+      "related_files": [
+        "cvs/SalmaTawfik_resume.pdf"
+      ],
+      "messy_note": "Same person, same Last updated date, same phone; the two files use different emails."
+    },
+    {
+      "file": "cvs/SalmaTawfik_resume.pdf",
+      "person_id": "cand18",
+      "full_name": "Salma Tawfik",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "pdf",
+      "layout": "banner",
+      "last_updated": "2026-03-03",
+      "email": "elsymrad3+cand18b@gmail.com",
+      "phone": "+20 151 668 1668",
+      "location": "Cairo, Egypt",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Travel booking",
+        "Microsoft 365",
+        "Inbox management",
+        "Trello",
+        "ClickUp",
+        "Expensify",
+        "Meeting minutes",
+        "Google Workspace"
+      ],
+      "skills_as_written": [
+        "Travel booking",
+        "MS Office 365",
+        "Inbox management",
+        "Trello",
+        "ClickUp",
+        "Expensify",
+        "Meeting minutes",
+        "G Suite"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Virtual Executive Assistant",
+          "company": "Silverbirch Legal Group",
+          "start": "2021-10",
+          "end": "present"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Fennix Call Center Services",
+          "start": "2020-06",
+          "end": "2021-09"
+        }
+      ],
+      "messy_case": "duplicate_diff_email_same_phone",
+      "related_files": [
+        "cvs/Resume - Salma Tawfik.pdf"
+      ],
+      "messy_note": "Same person, same Last updated date, same phone; the two files use different emails."
+    },
+    {
+      "file": "cvs/Resume - Danica Petrovic.docx",
+      "person_id": "cand19",
+      "full_name": "Danica Petrović",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2025-03-13",
+      "email": "elsymrad3+cand19@gmail.com",
+      "phone": "+381 62 966 1666",
+      "location": "Novi Sad, Serbia",
+      "languages": [
+        "Serbian",
+        "English"
+      ],
+      "language_levels": {
+        "Serbian": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "Data entry",
+        "Canva",
+        "Calendar management",
+        "Meeting minutes",
+        "Inbox management"
+      ],
+      "skills_as_written": [
+        "Data entry",
+        "Canva Pro",
+        "Calendar management",
+        "Meeting minutes",
+        "Inbox management"
+      ],
+      "ghl_years": 0,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [
+        "supported_ceo"
+      ],
+      "jobs": [
+        {
+          "title": "Executive Assistant to the CEO",
+          "company": "Tamsinvale Consulting",
+          "start": "2019-09",
+          "end": "present"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Yarrowby Retail",
+          "start": "2018-04",
+          "end": "2019-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/dana.zoubi.resume.pdf",
+      "person_id": "cand20",
+      "full_name": "Dana Al-Zoubi",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "pdf",
+      "layout": "classic",
+      "last_updated": "2026-09-26",
+      "email": "elsymrad3+cand20@gmail.com",
+      "phone": "+962 77 675 8444",
+      "location": "Amman, Jordan",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "ClickUp",
+        "Calendar management",
+        "Zoom",
+        "Slack",
+        "Expensify",
+        "Travel booking"
+      ],
+      "skills_as_written": [
+        "ClickUp",
+        "Calendar management",
+        "Zoom",
+        "Slack",
+        "Expensify",
+        "Travel booking"
+      ],
+      "ghl_years": 0,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Virtual Executive Assistant",
+          "company": "Callowmere Consulting",
+          "start": "2024-01",
+          "end": "present"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Marrowgate Trading",
+          "start": "2021-09",
+          "end": "2023-09"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Bautista Kristine 2026.docx",
+      "person_id": "cand21",
+      "full_name": "Kristine Joy Bautista",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2026-04-20",
+      "email": "elsymrad3+cand21@gmail.com",
+      "phone": "+63 973 640 2512",
+      "location": "Iloilo City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Meeting minutes",
+        "Calendar management",
+        "Data entry",
+        "Microsoft 365",
+        "ClickUp",
+        "Expensify",
+        "Travel booking"
+      ],
+      "skills_as_written": [
+        "Meeting minutes",
+        "Calendar management",
+        "Data entry",
+        "MS Office 365",
+        "ClickUp",
+        "Expensify",
+        "Travel booking"
+      ],
+      "ghl_years": 0,
+      "years_experience": 7,
+      "certifications": [],
+      "flags": [
+        "supported_ceo"
+      ],
+      "jobs": [
+        {
+          "title": "Executive Assistant to the Founder",
+          "company": "Redfernly Consulting",
+          "start": "2019-03",
+          "end": "present"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Callowmere Logistics",
+          "start": "2017-12",
+          "end": "2019-01"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Montoya_V_cv_final.pdf",
+      "person_id": "cand22",
+      "full_name": "Valeria Montoya",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "pdf",
+      "layout": "classic",
+      "last_updated": "2026-01-01",
+      "email": "elsymrad3+cand22@gmail.com",
+      "phone": "+57 305 155 6211",
+      "location": "Bogotá, Colombia",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "Expensify",
+        "Canva",
+        "Travel booking",
+        "Zoom",
+        "Slack",
+        "Microsoft 365",
+        "Trello",
+        "Notion"
+      ],
+      "skills_as_written": [
+        "Expensify",
+        "Canva Pro",
+        "Travel booking",
+        "Zoom",
+        "Slack",
+        "MS Office 365",
+        "Trello",
+        "Notion"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Virtual Executive Assistant",
+          "company": "Umberleigh Legal Group",
+          "start": "2024-10",
+          "end": "present"
+        },
+        {
+          "title": "Administrative Assistant",
+          "company": "Corvane Holdings",
+          "start": "2022-11",
+          "end": "2024-09"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Fennix Call Center Services",
+          "start": "2020-06",
+          "end": "2022-08"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/ZainabFarooq-Resume.docx",
+      "person_id": "cand23",
+      "full_name": "Zainab Farooq",
+      "role": "eva",
+      "target_role": "Executive Virtual Assistant",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2024-05-10",
+      "email": "elsymrad3+cand23@gmail.com",
+      "phone": "+92 345 9019719",
+      "location": "Karachi, Pakistan",
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "language_levels": {
+        "Urdu": "Native",
+        "English": "Fluent",
+        "Punjabi": "Conversational"
+      },
+      "skills": [
+        "Canva",
+        "Inbox management",
+        "Zoom",
+        "Expensify",
+        "Trello"
+      ],
+      "skills_as_written": [
+        "Canva Pro",
+        "Inbox management",
+        "Zoom",
+        "Expensify",
+        "Trello"
+      ],
+      "ghl_years": 0,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Virtual Executive Assistant",
+          "company": "Tamsinvale Capital Partners",
+          "start": "2022-03",
+          "end": "present"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Tallowbrook Retail",
+          "start": "2020-08",
+          "end": "2021-12"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Ma_Gonzaga_CV.docx",
+      "person_id": "cand24",
+      "full_name": "Ma. Teresa Gonzaga",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2026-06-02",
+      "email": "elsymrad3+cand24@gmail.com",
+      "phone": "+63 939 253 1498",
+      "location": "Makati City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Gusto payroll",
+        "Accounts receivable",
+        "Dext",
+        "1099 preparation",
+        "Sales tax filing",
+        "Accounts payable",
+        "Hubdoc",
+        "Excel"
+      ],
+      "skills_as_written": [
+        "QBO",
+        "Gusto payroll",
+        "Accounts receivable",
+        "Dext",
+        "1099 preparation",
+        "Sales tax filing",
+        "Accounts payable",
+        "Hubdoc",
+        "Excel (pivot tables, VLOOKUP)"
+      ],
+      "ghl_years": 0,
+      "years_experience": 7,
+      "certifications": [
+        "QuickBooks ProAdvisor"
+      ],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Remote Bookkeeper",
+          "company": "Bluepeak Accounting Outsourcing",
+          "start": "2022-04",
+          "end": "present"
+        },
+        {
+          "title": "Bookkeeping Assistant",
+          "company": "Umberleigh Finance Hub",
+          "start": "2018-11",
+          "end": "2022-03"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Corvane Retail",
+          "start": "2017-08",
+          "end": "2018-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Resume - Hesham Ragab.pdf",
+      "person_id": "cand25",
+      "full_name": "Hesham Ragab",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "pdf",
+      "layout": "classic",
+      "last_updated": "2025-12-24",
+      "email": "elsymrad3+cand25@gmail.com",
+      "phone": "+20 119 361 3407",
+      "location": "Mansoura, Egypt",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Gusto payroll",
+        "Hubdoc",
+        "Bank reconciliations",
+        "Bill.com",
+        "Accounts payable",
+        "1099 preparation",
+        "Xero"
+      ],
+      "skills_as_written": [
+        "QBO",
+        "Gusto payroll",
+        "Hubdoc",
+        "Bank reconciliations",
+        "Bill.com",
+        "Accounts payable",
+        "1099 preparation",
+        "Xero"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Bookkeeper",
+          "company": "Ostravia Bookkeeping Services",
+          "start": "2021-11",
+          "end": "present"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Umberleigh Printing",
+          "start": "2019-05",
+          "end": "2021-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/thandiwe.nkosi.resume.docx",
+      "person_id": "cand26",
+      "full_name": "Thandiwe Nkosi",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2026-08-01",
+      "email": "elsymrad3+cand26@gmail.com",
+      "phone": "+27 82 845 2637",
+      "location": "Durban, South Africa",
+      "languages": [
+        "English",
+        "Zulu",
+        "Afrikaans"
+      ],
+      "language_levels": {
+        "English": "Native",
+        "Zulu": "Native",
+        "Afrikaans": "Conversational"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Dext",
+        "Accounts payable",
+        "Shopify payouts reconciliation",
+        "Bank reconciliations",
+        "Xero",
+        "Excel"
+      ],
+      "skills_as_written": [
+        "QuickBooks Online",
+        "Dext",
+        "Accounts payable",
+        "Shopify payouts reconciliation",
+        "Bank reconciliations",
+        "Xero",
+        "Excel (pivot tables, VLOOKUP)"
+      ],
+      "ghl_years": 0,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Senior Bookkeeper",
+          "company": "Juniperra Tax & Books",
+          "start": "2021-06",
+          "end": "present"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Emberlyn Foods",
+          "start": "2020-01",
+          "end": "2021-03"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Castillo Rowena 2025.pdf",
+      "person_id": "cand27",
+      "full_name": "Rowena Castillo",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "pdf",
+      "layout": "banner",
+      "last_updated": "2025-04-06",
+      "email": "elsymrad3+cand27@gmail.com",
+      "phone": "+63 924 607 9195",
+      "location": "Pasig City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "1099 preparation",
+        "Sales tax filing",
+        "Accounts payable",
+        "Xero",
+        "Bill.com",
+        "Dext",
+        "Gusto payroll",
+        "Month-end close"
+      ],
+      "skills_as_written": [
+        "Quickbooks Online (QBO)",
+        "1099 preparation",
+        "Sales tax filing",
+        "Accounts payable",
+        "Xero",
+        "Bill.com",
+        "Dext",
+        "Gusto payroll",
+        "Month-end close"
+      ],
+      "ghl_years": 0,
+      "years_experience": 6,
+      "certifications": [
+        "QuickBooks ProAdvisor"
+      ],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Bookkeeper",
+          "company": "Fennix Ledger Co.",
+          "start": "2024-01",
+          "end": "present"
+        },
+        {
+          "title": "Junior Bookkeeper",
+          "company": "Umberleigh Accounting Outsourcing",
+          "start": "2019-01",
+          "end": "2023-12"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Kestrelton Retail",
+          "start": "2017-07",
+          "end": "2018-09"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Bouzid_N_cv_final.docx",
+      "person_id": "cand28",
+      "full_name": "Nadia Bouzid",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2024-12-25",
+      "email": "elsymrad3+cand28@gmail.com",
+      "phone": "+212 623-776806",
+      "location": "Rabat, Morocco",
+      "languages": [
+        "Arabic",
+        "French",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "French": "Fluent",
+        "English": "Professional"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Shopify payouts reconciliation",
+        "Accounts receivable",
+        "Hubdoc",
+        "Gusto payroll",
+        "Bank reconciliations",
+        "Xero",
+        "Excel"
+      ],
+      "skills_as_written": [
+        "Quickbooks Online (QBO)",
+        "Shopify payouts reconciliation",
+        "Accounts receivable",
+        "Hubdoc",
+        "Gusto payroll",
+        "Bank reconciliations",
+        "Xero",
+        "MS Excel"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Senior Bookkeeper",
+          "company": "Ostravia Bookkeeping Services",
+          "start": "2021-08",
+          "end": "present"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Kestrelton Printing",
+          "start": "2019-04",
+          "end": "2021-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/ArjunMehta-Resume.pdf",
+      "person_id": "cand29",
+      "full_name": "Arjun Mehta",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "pdf",
+      "layout": "compact",
+      "last_updated": "2026-03-05",
+      "email": "elsymrad3+cand29@gmail.com",
+      "phone": "+91 95657 58724",
+      "location": "Ahmedabad, India",
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "language_levels": {
+        "Hindi": "Fluent",
+        "English": "Fluent"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Bill.com",
+        "1099 preparation",
+        "Shopify payouts reconciliation",
+        "Dext",
+        "Hubdoc",
+        "Month-end close",
+        "Gusto payroll"
+      ],
+      "skills_as_written": [
+        "Quickbooks Online (QBO)",
+        "Bill.com",
+        "1099 preparation",
+        "Shopify payouts reconciliation",
+        "Dext",
+        "Hubdoc",
+        "Month-end close",
+        "Gusto payroll"
+      ],
+      "ghl_years": 0,
+      "years_experience": 8,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Remote Bookkeeper",
+          "company": "Quillon Finance Hub",
+          "start": "2020-01",
+          "end": "present"
+        },
+        {
+          "title": "Bookkeeping Assistant",
+          "company": "Halvard Ledger Co.",
+          "start": "2017-08",
+          "end": "2019-12"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Fennix Printing",
+          "start": "2015-10",
+          "end": "2017-04"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Grace_Achieng_CV.docx",
+      "person_id": "cand30",
+      "full_name": "Grace Achieng",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2025-06-14",
+      "email": "elsymrad3+cand30@gmail.com",
+      "phone": "+254 758 714 848",
+      "location": "Kisumu, Kenya",
+      "languages": [
+        "Swahili",
+        "English"
+      ],
+      "language_levels": {
+        "Swahili": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Excel",
+        "Bill.com",
+        "Accounts payable",
+        "Xero",
+        "Sales tax filing",
+        "Shopify payouts reconciliation",
+        "1099 preparation",
+        "Dext"
+      ],
+      "skills_as_written": [
+        "QuickBooks Online",
+        "MS Excel",
+        "Bill.com",
+        "Accounts payable",
+        "Xero",
+        "Sales tax filing",
+        "Shopify payouts reconciliation",
+        "1099 preparation",
+        "Dext"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [
+        "QuickBooks ProAdvisor"
+      ],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Bookkeeper",
+          "company": "Kestrelton Ledger Co.",
+          "start": "2023-11",
+          "end": "present"
+        },
+        {
+          "title": "Bookkeeping Assistant",
+          "company": "Driftmoor Bookkeeping Services",
+          "start": "2022-03",
+          "end": "2023-10"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Redfernly Trading",
+          "start": "2021-03",
+          "end": "2022-02"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Jerome Santos Resume.pdf",
+      "person_id": "cand31",
+      "full_name": "Jerome Santos",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "pdf",
+      "layout": "compact",
+      "last_updated": "2024-06-20",
+      "email": "elsymrad3+cand31@gmail.com",
+      "phone": "+63 962 320 6735",
+      "location": "Santa Rosa, Laguna, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Bank reconciliations",
+        "1099 preparation",
+        "Accounts payable",
+        "Sales tax filing",
+        "Month-end close"
+      ],
+      "skills_as_written": [
+        "QBO",
+        "Bank reconciliations",
+        "1099 preparation",
+        "Accounts payable",
+        "Sales tax filing",
+        "Month-end close"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Remote Bookkeeper",
+          "company": "Quillon Tax & Books",
+          "start": "2021-03",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Halvard Foods",
+          "start": "2019-09",
+          "end": "2020-11"
+        }
+      ],
+      "messy_case": "updated_older",
+      "related_files": [
+        "cvs/Jerome_Santos_Resume_2026.pdf"
+      ],
+      "messy_note": "Older CV of a person who also has a newer one. Use the newer file."
+    },
+    {
+      "file": "cvs/Jerome_Santos_Resume_2026.pdf",
+      "person_id": "cand31",
+      "full_name": "Jerome Santos",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "pdf",
+      "layout": "sidebar",
+      "last_updated": "2026-05-12",
+      "email": "elsymrad3+cand31@gmail.com",
+      "phone": "+63 962 320 6735",
+      "location": "Santa Rosa, Laguna, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Bank reconciliations",
+        "1099 preparation",
+        "Accounts payable",
+        "Sales tax filing",
+        "Month-end close",
+        "Xero",
+        "Gusto payroll"
+      ],
+      "skills_as_written": [
+        "QBO",
+        "Bank reconciliations",
+        "1099 preparation",
+        "Accounts payable",
+        "Sales tax filing",
+        "Month-end close",
+        "Xero",
+        "Gusto payroll"
+      ],
+      "ghl_years": 0,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Remote Bookkeeper",
+          "company": "Quillon Tax & Books",
+          "start": "2021-03",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Halvard Foods",
+          "start": "2019-09",
+          "end": "2020-11"
+        }
+      ],
+      "messy_case": "updated_newer",
+      "related_files": [
+        "cvs/Jerome Santos Resume.pdf"
+      ],
+      "messy_note": "Newer CV of the same person: more years and extra skills compared to the older file."
+    },
+    {
+      "file": "cvs/layal.nassar.resume.docx",
+      "person_id": "cand32",
+      "full_name": "Layal Nassar",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2026-04-07",
+      "email": "elsymrad3+cand32@gmail.com",
+      "phone": "+961 3 152 965",
+      "location": "Jounieh, Lebanon",
+      "languages": [
+        "Arabic",
+        "English",
+        "French"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent",
+        "French": "Intermediate"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Month-end close",
+        "Bank reconciliations",
+        "Sales tax filing",
+        "Hubdoc",
+        "Accounts payable",
+        "Gusto payroll",
+        "Bill.com"
+      ],
+      "skills_as_written": [
+        "QuickBooks Online",
+        "Month-end close",
+        "Bank reconciliations",
+        "Sales tax filing",
+        "Hubdoc",
+        "Accounts payable",
+        "Gusto payroll",
+        "Bill.com"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Senior Bookkeeper",
+          "company": "Ostravia Bookkeeping Services",
+          "start": "2022-01",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Ostravia Printing",
+          "start": "2019-05",
+          "end": "2021-10"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Siddiqui Imran 2026.docx",
+      "person_id": "cand33",
+      "full_name": "Imran Siddiqui",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2026-04-10",
+      "email": "elsymrad3+cand33@gmail.com",
+      "phone": "+92 336 9296940",
+      "location": "Islamabad, Pakistan",
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "language_levels": {
+        "Urdu": "Native",
+        "English": "Fluent",
+        "Punjabi": "Conversational"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "Excel",
+        "Accounts receivable",
+        "Gusto payroll",
+        "Bank reconciliations",
+        "Dext",
+        "Sales tax filing",
+        "Accounts payable"
+      ],
+      "skills_as_written": [
+        "QBO",
+        "Excel (pivot tables, VLOOKUP)",
+        "Accounts receivable",
+        "Gusto payroll",
+        "Bank reconciliations",
+        "Dext",
+        "Sales tax filing",
+        "Accounts payable"
+      ],
+      "ghl_years": 0,
+      "years_experience": 9,
+      "certifications": [
+        "QuickBooks ProAdvisor"
+      ],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Remote Bookkeeper",
+          "company": "Tamsinvale Outsourcing Inc.",
+          "start": "2024-11",
+          "end": "present"
+        },
+        {
+          "title": "Junior Bookkeeper",
+          "company": "Halvard Tax & Books",
+          "start": "2017-01",
+          "end": "2024-10"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Lumenwick Logistics",
+          "start": "2014-04",
+          "end": "2016-09"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Fernandez_L_cv_final.pdf",
+      "person_id": "cand34",
+      "full_name": "Lucía Fernández",
+      "role": "bookkeeper",
+      "target_role": "QuickBooks Bookkeeper",
+      "format": "pdf",
+      "layout": "sidebar",
+      "last_updated": "2024-12-01",
+      "email": "elsymrad3+cand34@gmail.com",
+      "phone": "+52 73 5393 5195",
+      "location": "Monterrey, Mexico",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "QuickBooks Online",
+        "1099 preparation",
+        "Hubdoc",
+        "Sales tax filing",
+        "Accounts payable",
+        "Shopify payouts reconciliation",
+        "Gusto payroll",
+        "Dext",
+        "Bill.com"
+      ],
+      "skills_as_written": [
+        "Quickbooks Online (QBO)",
+        "1099 preparation",
+        "Hubdoc",
+        "Sales tax filing",
+        "Accounts payable",
+        "Shopify payouts reconciliation",
+        "Gusto payroll",
+        "Dext",
+        "Bill.com"
+      ],
+      "ghl_years": 0,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Bookkeeper",
+          "company": "Umberleigh Outsourcing Inc.",
+          "start": "2022-09",
+          "end": "present"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Sablewood Retail",
+          "start": "2020-07",
+          "end": "2022-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/BeaSoriano-Resume.pdf",
+      "person_id": "cand35",
+      "full_name": "Bea Soriano",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "pdf",
+      "layout": "banner",
+      "last_updated": "2024-11-08",
+      "email": "elsymrad3+cand35@gmail.com",
+      "phone": "+63 964 476 1445",
+      "location": "Manila, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "TikTok",
+        "Later",
+        "Instagram Reels",
+        "LinkedIn",
+        "CapCut"
+      ],
+      "skills_as_written": [
+        "TikTok",
+        "Later",
+        "Instagram Reels",
+        "LinkedIn",
+        "CapCut"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Social Media Manager",
+          "company": "Tamsinvale Coffee Co.",
+          "start": "2023-08",
+          "end": "present"
+        },
+        {
+          "title": "Content Assistant",
+          "company": "Zephyrine Apparel",
+          "start": "2021-10",
+          "end": "2023-07"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Lumenwick Trading",
+          "start": "2020-01",
+          "end": "2021-09"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Daniela_Quintero_CV.docx",
+      "person_id": "cand36",
+      "full_name": "Daniela Quintero",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2025-02-18",
+      "email": "elsymrad3+cand36@gmail.com",
+      "phone": "+57 306 650 9793",
+      "location": "Cali, Colombia",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "LinkedIn",
+        "Canva",
+        "Instagram Reels",
+        "Later",
+        "Google Analytics",
+        "Adobe Premiere Pro",
+        "Content calendars",
+        "Copywriting",
+        "CapCut",
+        "TikTok Ads"
+      ],
+      "skills_as_written": [
+        "LinkedIn",
+        "Canva",
+        "Instagram Reels",
+        "Later",
+        "Google Analytics",
+        "Adobe Premiere Pro",
+        "Content calendars",
+        "Copywriting",
+        "CapCut",
+        "TikTok Ads Manager"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Content & Social Media Manager",
+          "company": "Driftmoor Creative Agency",
+          "start": "2020-08",
+          "end": "present"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Yarrowby Foods",
+          "start": "2018-01",
+          "end": "2020-05"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Resume - Farah Mansour.pdf",
+      "person_id": "cand37",
+      "full_name": "Farah Mansour",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "pdf",
+      "layout": "compact",
+      "last_updated": "2025-10-15",
+      "email": "elsymrad3+cand37@gmail.com",
+      "phone": "+962 77 612 2941",
+      "location": "Zarqa, Jordan",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Canva",
+        "Meta Business Suite",
+        "Copywriting",
+        "LinkedIn",
+        "Later",
+        "Buffer",
+        "Adobe Premiere Pro",
+        "GoHighLevel"
+      ],
+      "skills_as_written": [
+        "Canva",
+        "Facebook Business Manager",
+        "Copywriting",
+        "LinkedIn",
+        "Later",
+        "Buffer",
+        "Adobe Premiere Pro",
+        "Go High Level (basic, 1 yr)"
+      ],
+      "ghl_years": 1,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Social Media Manager",
+          "company": "Halvard Coffee Co.",
+          "start": "2023-06",
+          "end": "present"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Yarrowby Foods",
+          "start": "2020-11",
+          "end": "2023-05"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/kevin.otieno.resume.docx",
+      "person_id": "cand38",
+      "full_name": "Kevin Otieno",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2026-03-08",
+      "email": "elsymrad3+cand38@gmail.com",
+      "phone": "+254 765 898 523",
+      "location": "Mombasa, Kenya",
+      "languages": [
+        "Swahili",
+        "English"
+      ],
+      "language_levels": {
+        "Swahili": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "TikTok",
+        "CapCut",
+        "Community management",
+        "Buffer",
+        "Canva",
+        "Meta Business Suite",
+        "Meta Ads",
+        "Instagram Reels"
+      ],
+      "skills_as_written": [
+        "TikTok",
+        "CapCut",
+        "Community management",
+        "Buffer",
+        "Canva Pro",
+        "Facebook Business Manager",
+        "Meta Ads",
+        "Instagram Reels"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Content & Social Media Manager",
+          "company": "Bluepeak Creative Agency",
+          "start": "2023-01",
+          "end": "present"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Marrowgate Trading",
+          "start": "2021-03",
+          "end": "2022-12"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Duarte Isabela 2026.docx",
+      "person_id": "cand39",
+      "full_name": "Isabela Duarte",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2026-01-24",
+      "email": "elsymrad3+cand39@gmail.com",
+      "phone": "+55 97 97607-5799",
+      "location": "Recife, Brazil",
+      "languages": [
+        "Portuguese",
+        "English",
+        "Spanish"
+      ],
+      "language_levels": {
+        "Portuguese": "Native",
+        "English": "Fluent",
+        "Spanish": "Basic"
+      },
+      "skills": [
+        "LinkedIn",
+        "Later",
+        "Content calendars",
+        "Adobe Premiere Pro",
+        "Buffer"
+      ],
+      "skills_as_written": [
+        "LinkedIn",
+        "Later",
+        "Content calendars",
+        "Adobe Premiere Pro",
+        "Buffer"
+      ],
+      "ghl_years": 0,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Social Media Manager",
+          "company": "Nettlefield Apparel",
+          "start": "2021-11",
+          "end": "present"
+        },
+        {
+          "title": "Social Media Coordinator",
+          "company": "Zephyrine Skincare",
+          "start": "2020-08",
+          "end": "2021-10"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Fennix Logistics",
+          "start": "2018-12",
+          "end": "2020-06"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Cruz_N_cv_final.docx",
+      "person_id": "cand40",
+      "full_name": "Nicole Dela Cruz",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2025-09-15",
+      "email": "elsymrad3+cand40@gmail.com",
+      "phone": "+63 920 909 1688",
+      "location": "Taguig City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "CapCut",
+        "TikTok",
+        "Meta Ads",
+        "Canva",
+        "Google Analytics",
+        "Content calendars",
+        "TikTok Ads",
+        "GoHighLevel"
+      ],
+      "skills_as_written": [
+        "CapCut",
+        "TikTok",
+        "Meta Ads",
+        "Canva Pro",
+        "Google Analytics",
+        "Content calendars",
+        "TikTok Ads Manager",
+        "HighLevel (basic, 2 yrs)"
+      ],
+      "ghl_years": 2,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Content & Social Media Manager",
+          "company": "Kestrelton Fitness Studio",
+          "start": "2021-04",
+          "end": "present"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Tallowbrook Logistics",
+          "start": "2018-11",
+          "end": "2021-03"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/YasmineIdrissi-Resume.pdf",
+      "person_id": "cand41",
+      "full_name": "Yasmine El Idrissi",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "pdf",
+      "layout": "compact",
+      "last_updated": "2026-01-31",
+      "email": "elsymrad3+cand41@gmail.com",
+      "phone": "+212 692-636806",
+      "location": "Marrakesh, Morocco",
+      "languages": [
+        "Arabic",
+        "French",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "French": "Fluent",
+        "English": "Professional"
+      },
+      "skills": [
+        "CapCut",
+        "Later",
+        "Meta Ads",
+        "Community management",
+        "Content calendars"
+      ],
+      "skills_as_written": [
+        "CapCut",
+        "Later",
+        "Meta Ads",
+        "Community management",
+        "Content calendars"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Content & Social Media Manager",
+          "company": "Pinecrest Hollow Skincare",
+          "start": "2023-07",
+          "end": "present"
+        },
+        {
+          "title": "Content Assistant",
+          "company": "Tamsinvale Fitness Studio",
+          "start": "2022-05",
+          "end": "2023-06"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Zephyrine Retail",
+          "start": "2020-02",
+          "end": "2022-02"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Priya_Nair_CV.docx",
+      "person_id": "cand42",
+      "full_name": "Priya Nair",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2025-11-30",
+      "email": "elsymrad3+cand42@gmail.com",
+      "phone": "+91 95319 65540",
+      "location": "Kochi, India",
+      "languages": [
+        "Hindi",
+        "English",
+        "Malayalam"
+      ],
+      "language_levels": {
+        "Hindi": "Fluent",
+        "English": "Fluent",
+        "Malayalam": "Native"
+      },
+      "skills": [
+        "Meta Ads",
+        "Buffer",
+        "Adobe Premiere Pro",
+        "Later",
+        "Meta Business Suite",
+        "CapCut",
+        "Canva"
+      ],
+      "skills_as_written": [
+        "Meta Ads",
+        "Buffer",
+        "Adobe Premiere Pro",
+        "Later",
+        "Facebook Business Manager",
+        "CapCut",
+        "Canva"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Content & Social Media Manager",
+          "company": "Zephyrine Fitness Studio",
+          "start": "2021-06",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Nettlefield Printing",
+          "start": "2020-02",
+          "end": "2021-03"
+        }
+      ],
+      "messy_case": "duplicate_identical_copy",
+      "related_files": [
+        "cvs/Priya_Nair_CV (1).docx"
+      ],
+      "messy_note": "Byte-identical copy of the same Word file (\" (1)\" in the name)."
+    },
+    {
+      "file": "cvs/Priya_Nair_CV (1).docx",
+      "person_id": "cand42",
+      "full_name": "Priya Nair",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2025-11-30",
+      "email": "elsymrad3+cand42@gmail.com",
+      "phone": "+91 95319 65540",
+      "location": "Kochi, India",
+      "languages": [
+        "Hindi",
+        "English",
+        "Malayalam"
+      ],
+      "language_levels": {
+        "Hindi": "Fluent",
+        "English": "Fluent",
+        "Malayalam": "Native"
+      },
+      "skills": [
+        "Meta Ads",
+        "Buffer",
+        "Adobe Premiere Pro",
+        "Later",
+        "Meta Business Suite",
+        "CapCut",
+        "Canva"
+      ],
+      "skills_as_written": [
+        "Meta Ads",
+        "Buffer",
+        "Adobe Premiere Pro",
+        "Later",
+        "Facebook Business Manager",
+        "CapCut",
+        "Canva"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Content & Social Media Manager",
+          "company": "Zephyrine Fitness Studio",
+          "start": "2021-06",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Nettlefield Printing",
+          "start": "2020-02",
+          "end": "2021-03"
+        }
+      ],
+      "messy_case": "duplicate_identical_copy",
+      "related_files": [
+        "cvs/Priya_Nair_CV.docx"
+      ],
+      "messy_note": "Byte-identical copy of the same Word file (\" (1)\" in the name)."
+    },
+    {
+      "file": "cvs/Resume - Mateo Salazar.docx",
+      "person_id": "cand43",
+      "full_name": "Mateo Salazar",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2025-10-12",
+      "email": "elsymrad3+cand43@gmail.com",
+      "phone": "+52 44 3712 4133",
+      "location": "Puebla, Mexico",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "TikTok",
+        "Hootsuite",
+        "Buffer",
+        "Meta Business Suite",
+        "Google Analytics"
+      ],
+      "skills_as_written": [
+        "TikTok",
+        "Hootsuite",
+        "Buffer",
+        "Facebook Business Manager",
+        "Google Analytics"
+      ],
+      "ghl_years": 0,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Social Media Manager",
+          "company": "Pinecrest Hollow Fitness Studio",
+          "start": "2023-09",
+          "end": "present"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Orchardine Retail",
+          "start": "2022-05",
+          "end": "2023-08"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/hiba.saad.resume.docx",
+      "person_id": "cand44",
+      "full_name": "Hiba Saad",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2026-01-15",
+      "email": "elsymrad3+cand44@gmail.com",
+      "phone": "+961 76 680 542",
+      "location": "Tripoli, Lebanon",
+      "languages": [
+        "Arabic",
+        "English",
+        "French"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent",
+        "French": "Intermediate"
+      },
+      "skills": [
+        "Instagram Reels",
+        "Adobe Premiere Pro",
+        "Buffer",
+        "Canva",
+        "Content calendars",
+        "CapCut",
+        "TikTok Ads"
+      ],
+      "skills_as_written": [
+        "Instagram Reels",
+        "Adobe Premiere Pro",
+        "Buffer",
+        "Canva Pro",
+        "Content calendars",
+        "CapCut",
+        "TikTok Ads"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Social Media Manager",
+          "company": "Ostravia Creative Agency",
+          "start": "2022-05",
+          "end": "present"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Vellumark Printing",
+          "start": "2020-01",
+          "end": "2022-01"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Dlamini Sipho 2024.docx",
+      "person_id": "cand45",
+      "full_name": "Sipho Dlamini",
+      "role": "social",
+      "target_role": "Social Media Manager",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2024-07-01",
+      "email": "elsymrad3+cand45@gmail.com",
+      "phone": "+27 82 185 2187",
+      "location": "Johannesburg, South Africa",
+      "languages": [
+        "English",
+        "Zulu",
+        "Afrikaans"
+      ],
+      "language_levels": {
+        "English": "Native",
+        "Zulu": "Native",
+        "Afrikaans": "Conversational"
+      },
+      "skills": [
+        "Adobe Premiere Pro",
+        "Copywriting",
+        "LinkedIn",
+        "Community management",
+        "Meta Ads",
+        "Later",
+        "Meta Business Suite",
+        "Canva"
+      ],
+      "skills_as_written": [
+        "Adobe Premiere Pro",
+        "Copywriting",
+        "LinkedIn",
+        "Community management",
+        "Meta Ads",
+        "Later",
+        "Meta Business Suite",
+        "Canva"
+      ],
+      "ghl_years": 0,
+      "years_experience": 6,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Content & Social Media Manager",
+          "company": "Umberleigh Skincare",
+          "start": "2018-04",
+          "end": "present"
+        },
+        {
+          "title": "Receptionist",
+          "company": "Quillon Printing",
+          "start": "2015-09",
+          "end": "2018-01"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Tolentino_J_cv_final.docx",
+      "person_id": "cand46",
+      "full_name": "Jessa Mae Tolentino",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2024-11-15",
+      "email": "elsymrad3+cand46@gmail.com",
+      "phone": "+63 954 347 1405",
+      "location": "Imus, Cavite, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Live chat",
+        "Freshdesk",
+        "Macros",
+        "Email support",
+        "Intercom"
+      ],
+      "skills_as_written": [
+        "Live chat",
+        "Freshdesk",
+        "Macros",
+        "Email support",
+        "Intercom"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Support Agent",
+          "company": "Zephyrine Electronics",
+          "start": "2022-12",
+          "end": "present"
+        },
+        {
+          "title": "Customer Support Representative",
+          "company": "Fennix Beauty",
+          "start": "2021-07",
+          "end": "2022-11"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Nettlefield Retail",
+          "start": "2019-11",
+          "end": "2021-05"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/AhmedShalaby-Resume.docx",
+      "person_id": "cand47",
+      "full_name": "Ahmed Shalaby",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "docx",
+      "layout": "table",
+      "last_updated": "2024-12-21",
+      "email": "elsymrad3+cand47@gmail.com",
+      "phone": "+20 154 980 9829",
+      "location": "Cairo, Egypt",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Intercom",
+        "Freshdesk",
+        "Live chat",
+        "Jira",
+        "CSAT tracking",
+        "Zendesk",
+        "Refunds & returns",
+        "Gorgias",
+        "Shopify"
+      ],
+      "skills_as_written": [
+        "Intercom",
+        "Freshdesk",
+        "Live chat",
+        "Jira",
+        "CSAT tracking",
+        "ZenDesk",
+        "Refunds & returns",
+        "Gorgias",
+        "Shopify"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Experience Associate",
+          "company": "Wrenfield Outfitters",
+          "start": "2023-10",
+          "end": "present"
+        },
+        {
+          "title": "Customer Support Representative",
+          "company": "Fennix Subscription Box",
+          "start": "2020-08",
+          "end": "2023-09"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Vellumark Retail",
+          "start": "2018-02",
+          "end": "2020-07"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Carlos_Mejia_CV.docx",
+      "person_id": "cand48",
+      "full_name": "Carlos Mejía",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2024-10-03",
+      "email": "elsymrad3+cand48@gmail.com",
+      "phone": "+57 322 779 8607",
+      "location": "Barranquilla, Colombia",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "Shopify",
+        "Macros",
+        "Refunds & returns",
+        "Email support",
+        "Help Scout"
+      ],
+      "skills_as_written": [
+        "Shopify",
+        "Macros",
+        "Refunds & returns",
+        "Email support",
+        "Help Scout"
+      ],
+      "ghl_years": 0,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Experience Associate",
+          "company": "Orchardine Subscription Box",
+          "start": "2022-07",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Yarrowby Printing",
+          "start": "2020-09",
+          "end": "2022-04"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Resume - Aisha Rahman.pdf",
+      "person_id": "cand49",
+      "full_name": "Aisha Rahman",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "pdf",
+      "layout": "classic",
+      "last_updated": "2025-12-24",
+      "email": "elsymrad3+cand49@gmail.com",
+      "phone": "+92 308 9624167",
+      "location": "Faisalabad, Pakistan",
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "language_levels": {
+        "Urdu": "Native",
+        "English": "Fluent",
+        "Punjabi": "Conversational"
+      },
+      "skills": [
+        "Macros",
+        "Zendesk",
+        "Jira",
+        "Phone support",
+        "Freshdesk",
+        "Kustomer"
+      ],
+      "skills_as_written": [
+        "Macros",
+        "Zendesk",
+        "Jira",
+        "Phone support",
+        "Freshdesk",
+        "Kustomer"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Experience Associate",
+          "company": "Silverbirch Home Goods",
+          "start": "2024-01",
+          "end": "present"
+        },
+        {
+          "title": "Customer Support Representative",
+          "company": "Orchardine Subscription Box",
+          "start": "2022-07",
+          "end": "2023-12"
+        },
+        {
+          "title": "Office Assistant",
+          "company": "Tamsinvale Foods",
+          "start": "2021-04",
+          "end": "2022-04"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/paolo.navarro.resume.docx",
+      "person_id": "cand50",
+      "full_name": "Paolo Navarro",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2025-01-16",
+      "email": "elsymrad3+cand50@gmail.com",
+      "phone": "+63 910 319 7315",
+      "location": "Bacolod City, Philippines",
+      "languages": [
+        "Filipino",
+        "English"
+      ],
+      "language_levels": {
+        "Filipino": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Phone support",
+        "Refunds & returns",
+        "Help Scout",
+        "Shopify",
+        "Email support",
+        "Freshdesk",
+        "Intercom",
+        "Gorgias"
+      ],
+      "skills_as_written": [
+        "Phone support",
+        "Refunds & returns",
+        "Help Scout",
+        "Shopify",
+        "Email support",
+        "Freshdesk",
+        "Intercom",
+        "Gorgias"
+      ],
+      "ghl_years": 0,
+      "years_experience": 5,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Experience Associate",
+          "company": "Nettlefield Outfitters",
+          "start": "2021-07",
+          "end": "present"
+        },
+        {
+          "title": "Customer Support Representative",
+          "company": "Redfernly Home Goods",
+          "start": "2019-12",
+          "end": "2021-06"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Yarrowby Call Center Services",
+          "start": "2018-04",
+          "end": "2019-10"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/CV Kamau Wanjiru 2026.pdf",
+      "person_id": "cand51",
+      "full_name": "Wanjiru Kamau",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "pdf",
+      "layout": "classic",
+      "last_updated": "2026-06-19",
+      "email": "elsymrad3+cand51@gmail.com",
+      "phone": "+254 798 211 265",
+      "location": "Nakuru, Kenya",
+      "languages": [
+        "Swahili",
+        "English"
+      ],
+      "language_levels": {
+        "Swahili": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Jira",
+        "Email support",
+        "Help Scout",
+        "Freshdesk",
+        "Slack",
+        "CSAT tracking"
+      ],
+      "skills_as_written": [
+        "Jira",
+        "Email support",
+        "Help Scout",
+        "Freshdesk",
+        "Slack",
+        "CSAT tracking"
+      ],
+      "ghl_years": 0,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Support Specialist",
+          "company": "Corvane Support Center",
+          "start": "2024-03",
+          "end": "present"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Callowmere Logistics",
+          "start": "2021-10",
+          "end": "2024-02"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Omar Haddadin CV.pdf",
+      "person_id": "cand52",
+      "full_name": "Omar Haddadin",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "pdf",
+      "layout": "classic",
+      "last_updated": "2026-07-21",
+      "email": "elsymrad3+cand52@gmail.com",
+      "phone": "+962 78 143 2488",
+      "location": "Amman, Jordan",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Help Scout",
+        "Shopify",
+        "Freshdesk",
+        "Refunds & returns",
+        "CSAT tracking",
+        "Phone support",
+        "Zendesk",
+        "Kustomer"
+      ],
+      "skills_as_written": [
+        "Help Scout",
+        "Shopify",
+        "Freshdesk",
+        "Refunds & returns",
+        "CSAT tracking",
+        "Phone support",
+        "ZenDesk",
+        "Kustomer"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Support Agent",
+          "company": "Corvane Electronics",
+          "start": "2022-03",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Zephyrine Call Center Services",
+          "start": "2020-10",
+          "end": "2022-02"
+        }
+      ],
+      "messy_case": "duplicate_pdf_and_docx",
+      "related_files": [
+        "cvs/Omar Haddadin CV.docx"
+      ],
+      "messy_note": "Same person and content saved once as PDF and once as Word."
+    },
+    {
+      "file": "cvs/Omar Haddadin CV.docx",
+      "person_id": "cand52",
+      "full_name": "Omar Haddadin",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "docx",
+      "layout": "plain",
+      "last_updated": "2026-07-21",
+      "email": "elsymrad3+cand52@gmail.com",
+      "phone": "+962 78 143 2488",
+      "location": "Amman, Jordan",
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent"
+      },
+      "skills": [
+        "Help Scout",
+        "Shopify",
+        "Freshdesk",
+        "Refunds & returns",
+        "CSAT tracking",
+        "Phone support",
+        "Zendesk",
+        "Kustomer"
+      ],
+      "skills_as_written": [
+        "Help Scout",
+        "Shopify",
+        "Freshdesk",
+        "Refunds & returns",
+        "CSAT tracking",
+        "Phone support",
+        "ZenDesk",
+        "Kustomer"
+      ],
+      "ghl_years": 0,
+      "years_experience": 4,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Support Agent",
+          "company": "Corvane Electronics",
+          "start": "2022-03",
+          "end": "present"
+        },
+        {
+          "title": "Retail Cashier",
+          "company": "Zephyrine Call Center Services",
+          "start": "2020-10",
+          "end": "2022-02"
+        }
+      ],
+      "messy_case": "duplicate_pdf_and_docx",
+      "related_files": [
+        "cvs/Omar Haddadin CV.pdf"
+      ],
+      "messy_note": "Same person and content saved once as PDF and once as Word."
+    },
+    {
+      "file": "cvs/FernandaLima-Resume.pdf",
+      "person_id": "cand53",
+      "full_name": "Fernanda Lima",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "pdf",
+      "layout": "compact",
+      "last_updated": "2024-04-18",
+      "email": "elsymrad3+cand53@gmail.com",
+      "phone": "+55 70 96804-4251",
+      "location": "Belo Horizonte, Brazil",
+      "languages": [
+        "Portuguese",
+        "English",
+        "Spanish"
+      ],
+      "language_levels": {
+        "Portuguese": "Native",
+        "English": "Fluent",
+        "Spanish": "Basic"
+      },
+      "skills": [
+        "Zendesk",
+        "Help Scout",
+        "Freshdesk",
+        "Phone support",
+        "Intercom",
+        "Jira",
+        "Gorgias",
+        "Shopify"
+      ],
+      "skills_as_written": [
+        "ZenDesk",
+        "Help Scout",
+        "Freshdesk",
+        "Phone support",
+        "Intercom",
+        "Jira",
+        "Gorgias",
+        "Shopify"
+      ],
+      "ghl_years": 0,
+      "years_experience": 3,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Support Specialist",
+          "company": "Tallowbrook Home Goods",
+          "start": "2022-12",
+          "end": "present"
+        },
+        {
+          "title": "Live Chat Agent",
+          "company": "Yarrowby Subscription Box",
+          "start": "2020-08",
+          "end": "2022-11"
+        },
+        {
+          "title": "Data Entry Clerk",
+          "company": "Tallowbrook Retail",
+          "start": "2018-04",
+          "end": "2020-04"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Rania_Aoun_CV.pdf",
+      "person_id": "cand54",
+      "full_name": "Rania Aoun",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "pdf",
+      "layout": "compact",
+      "last_updated": "2025-01-06",
+      "email": "elsymrad3+cand54@gmail.com",
+      "phone": "+961 3 157 869",
+      "location": "Zahlé, Lebanon",
+      "languages": [
+        "Arabic",
+        "English",
+        "French"
+      ],
+      "language_levels": {
+        "Arabic": "Native",
+        "English": "Fluent",
+        "French": "Intermediate"
+      },
+      "skills": [
+        "Help Scout",
+        "Phone support",
+        "Live chat",
+        "Intercom",
+        "Email support"
+      ],
+      "skills_as_written": [
+        "Help Scout",
+        "Phone support",
+        "Live chat",
+        "Intercom",
+        "Email support"
+      ],
+      "ghl_years": 0,
+      "years_experience": 2,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Support Agent",
+          "company": "Emberlyn Beauty",
+          "start": "2022-11",
+          "end": "present"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Tamsinvale Printing",
+          "start": "2020-03",
+          "end": "2022-08"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    },
+    {
+      "file": "cvs/Resume - Diego Herrera.docx",
+      "person_id": "cand55",
+      "full_name": "Diego Herrera",
+      "role": "support",
+      "target_role": "Customer Support Agent",
+      "format": "docx",
+      "layout": "modern",
+      "last_updated": "2026-09-08",
+      "email": "elsymrad3+cand55@gmail.com",
+      "phone": "+52 63 1183 7259",
+      "location": "Tijuana, Mexico",
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "language_levels": {
+        "Spanish": "Native",
+        "English": "C1"
+      },
+      "skills": [
+        "Shopify",
+        "Jira",
+        "Email support",
+        "CSAT tracking",
+        "Freshdesk"
+      ],
+      "skills_as_written": [
+        "Shopify",
+        "Jira",
+        "Email support",
+        "CSAT tracking",
+        "Freshdesk"
+      ],
+      "ghl_years": 0,
+      "years_experience": 6,
+      "certifications": [],
+      "flags": [],
+      "jobs": [
+        {
+          "title": "Customer Support Agent",
+          "company": "Nettlefield Electronics",
+          "start": "2022-10",
+          "end": "present"
+        },
+        {
+          "title": "Customer Support Representative",
+          "company": "Emberlyn Beauty",
+          "start": "2020-01",
+          "end": "2022-09"
+        },
+        {
+          "title": "Sales Associate",
+          "company": "Silverbirch Foods",
+          "start": "2017-06",
+          "end": "2019-12"
+        }
+      ],
+      "messy_case": "none",
+      "related_files": [],
+      "messy_note": "Regular CV."
+    }
+  ],
+  "test_question_types": [
+    {
+      "index": 1,
+      "type": "normal",
+      "criteria": {
+        "role": "bookkeeper",
+        "skills_all": [
+          "QuickBooks Online"
+        ],
+        "certs_all": [
+          "QuickBooks ProAdvisor"
+        ],
+        "min_years": 5
+      }
+    },
+    {
+      "index": 2,
+      "type": "skill_plus_language",
+      "criteria": {
+        "skills_all": [
+          "GoHighLevel"
+        ],
+        "min_ghl_years": 3,
+        "languages_all": [
+          "Arabic"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "type": "normal",
+      "criteria": {
+        "role": "support",
+        "skills_all": [
+          "Gorgias",
+          "Shopify"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "type": "impossible",
+      "criteria": {
+        "role": "bookkeeper",
+        "certs_all": [
+          "CPA"
+        ],
+        "skills_all": [
+          "NetSuite"
+        ],
+        "min_years": 8
+      }
+    },
+    {
+      "index": 5,
+      "type": "needs_newer_cv",
+      "criteria": {
+        "skills_all": [
+          "GoHighLevel",
+          "Make.com"
+        ],
+        "min_ghl_years": 3
+      }
+    },
+    {
+      "index": 6,
+      "type": "normal",
+      "criteria": {
+        "role": "social",
+        "skills_all": [
+          "CapCut",
+          "TikTok Ads"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "type": "duplicate_person",
+      "criteria": {
+        "skills_all": [
+          "Kustomer"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "type": "scanned_only",
+      "criteria": {
+        "skills_all": [
+          "Keap"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "type": "normal",
+      "criteria": {
+        "role": "eva",
+        "flags_all": [
+          "supported_ceo"
+        ],
+        "skills_all": [
+          "Travel booking"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "type": "impossible",
+      "criteria": {
+        "skills_all": [
+          "GoHighLevel"
+        ],
+        "languages_all": [
+          "German"
+        ]
+      }
+    }
+  ]
+}

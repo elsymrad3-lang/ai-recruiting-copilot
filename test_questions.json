@@ -1,0 +1,80 @@
+[
+  {
+    "question": "Which QuickBooks bookkeepers are Certified QuickBooks ProAdvisors with at least 5 years of bookkeeping experience?",
+    "expected": [
+      "Imran Siddiqui",
+      "Ma. Teresa Gonzaga",
+      "Rowena Castillo"
+    ],
+    "why": "Four bookkeepers hold the ProAdvisor certification, but Grace Achieng has only 3 years, so she is excluded."
+  },
+  {
+    "question": "Find GoHighLevel specialists with 3+ years of GHL experience who speak Arabic.",
+    "expected": [
+      "Karim Abdelrahman",
+      "Lina Haddad",
+      "Rami Khoury",
+      "Youssef Benali"
+    ],
+    "why": "GHL is written as GHL / GoHighLevel / Go High Level / HighLevel across CVs. Several people have 3+ years of GHL but no Arabic, and several Arabic speakers have under 3 years of GHL; only these have both."
+  },
+  {
+    "question": "Which customer support agents have worked with Gorgias on a Shopify store?",
+    "expected": [
+      "Ahmed Shalaby",
+      "Fernanda Lima",
+      "Paolo Navarro"
+    ],
+    "why": "Only three support agents list Gorgias; all three also list Shopify. Zendesk-only agents do not count."
+  },
+  {
+    "question": "Find a bookkeeper who is a licensed CPA with 8+ years of NetSuite experience.",
+    "expected": "NO_MATCH",
+    "why": "No CV mentions a CPA licence or NetSuite. The right answer is to say nobody fits."
+  },
+  {
+    "question": "Who has 3+ years of GoHighLevel and also builds automations in Make.com (Integromat)?",
+    "expected": [
+      "Bilal Qureshi",
+      "Joanna Dimaculangan",
+      "Lina Haddad"
+    ],
+    "why": "Bilal Qureshi only qualifies through his newer CV (2026-08-15: 3 years GHL, adds Make). His older CV (2025-02-10) shows 2 years and no Make. Lina Haddad and Joanna Dimaculangan qualify from single CVs."
+  },
+  {
+    "question": "Which social media managers edit video in CapCut and have run TikTok Ads campaigns?",
+    "expected": [
+      "Daniela Quintero",
+      "Hiba Saad",
+      "Nicole Dela Cruz"
+    ],
+    "why": "Many social media managers list CapCut or organic TikTok, but only three have run TikTok Ads."
+  },
+  {
+    "question": "Which customer support agents have used Kustomer?",
+    "expected": [
+      "Aisha Rahman",
+      "Omar Haddadin"
+    ],
+    "why": "Omar Haddadin has two copies of the same CV (one PDF, one Word, same Last updated date). He must be listed once, not twice."
+  },
+  {
+    "question": "Who has migrated clients from Keap (Infusionsoft) to GoHighLevel?",
+    "expected": "NO_MATCH",
+    "why": "The only person with this experience is Rhea Macaraeg, and it appears only in her scanned CV (cvs/scan_0047.pdf), which has no text layer. A text-based search cannot see it, so the expected answer excludes her and nobody else matches."
+  },
+  {
+    "question": "Which executive virtual assistants have worked directly for a CEO or founder and handle travel booking?",
+    "expected": [
+      "Camila Ortega",
+      "Hannah Mwangi",
+      "Kristine Joy Bautista"
+    ],
+    "why": "Four EAs worked for a CEO or founder (job title says so), but Danica Petrović does not list travel booking."
+  },
+  {
+    "question": "Find a GoHighLevel specialist who is fluent in German.",
+    "expected": "NO_MATCH",
+    "why": "Nobody in the pool lists German."
+  }
+]
