@@ -1,0 +1,47 @@
+CLIENT INTAKE CALL - auto transcript (unedited)
+Client: Brightwell Dental Studios  |  Contact: Tessa Morales (Operations Lead)
+Recruiter: Maya
+Role discussed: GHL Automation Specialist
+Recording quality: fair, some crosstalk
+
+[00:00:03] Maya: Hi Tessa, can you hear me okay?
+[00:00:06] Tessa: Yeah, yeah, sorry, I'm in the car, um, give me one sec, let me just, okay. Okay I'm parked. Hi.
+[00:00:14] Maya: No worries at all. Thanks for making time. So I just wanted to go through what you need for the, uh, the automation person.
+[00:00:22] Tessa: Right. So, okay, where do I start. We have, like, four clinics now, we just opened the one in, uh, in the east side, and our front desk is drowning. Like literally drowning. People call, nobody calls them back, the reminders go out wrong, it's a mess.
+[00:00:41] Maya: Got it. And you're on GoHighLevel already?
+[00:00:44] Tessa: Yes. Well. Kind of. Our old agency set it up, GHL, and then they kind of disappeared, so we have this account with like fifty workflows and nobody knows what half of them do. [laughs] It's bad.
+[00:00:58] Maya: Okay, so cleanup plus building new stuff.
+[00:01:01] Tessa: Exactly, cleanup first. Then, um, we want the missed call text-back, the recall reminders for cleanings, six months, you know, and reviews. Google reviews. We want the review request thing after every appointment.
+[00:01:15] Maya: Makes sense. How much GHL experience are you looking for?
+[00:01:19] Tessa: Um, I'd say someone who's done it a while. Like, at least three years? Three years minimum in GoHighLevel specifically, not just "I watched YouTube videos" you know what I mean.
+[00:01:29] Maya: Totally. Three plus years in GHL. And do they need dental or medical experience?
+[00:01:34] Tessa: Nice to have, not a must. Honestly if they know the platform they'll figure out dental.
+[00:01:40] Maya: Okay. And integrations, anything outside GHL?
+[00:01:44] Tessa: We use, um, what's it called, the practice software, Dentrix? I think. And Zapier for some things. Maybe Make, I heard Make is cheaper? I don't know. Whatever they're comfortable with.
+[00:01:57] Maya: Okay, noted, Zapier or Make. Hours?
+[00:02:01] Tessa: Part-time. Like twenty hours a week to start. We don't need someone full-time, it's just a cleanup project really.
+[00:02:09] Maya: Twenty hours, part-time, got it.
+[00:02:12] Tessa: Yeah. And, oh, the other thing, so we have a lot of patients who are, like, Arabic speakers, especially at the new clinic. Our owner Dr. Saleh, his patients, a lot of the families speak Arabic. So if the person speaks Arabic that's a, that's a nice bonus. For writing the SMS templates and stuff.
+[00:02:31] Maya: Arabic as a nice-to-have.
+[00:02:33] Tessa: Yeah, like, bonus points.
+[00:02:36] Maya: What timezone are you in again?
+[00:02:38] Tessa: Central. But they can be anywhere, I just want, um, some overlap in the morning, like our morning.
+[00:02:45] Maya: Okay. And budget-wise, what are you thinking for the rate?
+[00:02:49] Tessa: Ugh, yeah, so, that's, I need to talk to Dr. Saleh about that. He handles the money side. I don't want to give you a number and then he says no. Can we, can I get back to you on that?
+[00:03:01] Maya: Of course. I'll put it as TBD.
+[00:03:03] Tessa: Thanks. Sorry. [inaudible] ...he's in surgery all day.
+[00:03:10] Maya: No problem. Anything else? Start date?
+[00:03:13] Tessa: Like, yesterday. [laughs] As soon as possible.
+[00:03:17] Maya: Okay ASAP. And interview process, who'd be on the call?
+[00:03:21] Tessa: Me, and maybe Dr. Saleh if he's free. Probably just me first.
+[00:03:26] Maya: Great. I think I have what I need, I'll send over--
+[00:03:29] Tessa: Wait, sorry, actually, one thing. Two things. So the hours. Honestly if I'm being real, twenty hours is not gonna cut it. Once the cleanup is done we're gonna want them doing ongoing stuff, the new clinic campaigns, all of that. Let's make it full-time. Forty hours.
+[00:03:46] Maya: Okay, so full-time instead of part-time.
+[00:03:48] Tessa: Yes, full-time. Change that. And the Arabic thing, you know what, make it a must. Because they're going to be writing the patient messages for the new clinic and I don't want to, like, run everything through Google Translate. That's embarrassing.
+[00:04:02] Maya: Got it, Arabic required, not nice-to-have.
+[00:04:05] Tessa: Required. Yes. Sorry, I keep changing things.
+[00:04:08] Maya: That's what these calls are for. So: GHL Automation Specialist, three-plus years GoHighLevel, Arabic required, full-time, ASAP, rate TBD pending Dr. Saleh.
+[00:04:18] Tessa: Perfect. Yes. That's it.
+[00:04:20] Maya: I'll send a shortlist this week.
+[00:04:22] Tessa: Amazing, thank you so much, okay, bye, bye bye.
+[00:04:25] [call ended]

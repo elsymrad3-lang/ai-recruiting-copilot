@@ -1,0 +1,227 @@
+{
+  "name": "0 - Setup check",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "07d4601c-9f51-442b-aaf9-df36f0a8e004",
+      "name": "Run setup check",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://services.leadconnectorhq.com/opportunities/pipelines",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "locationId",
+              "value": "yLiKZKvk2CeI2ckIqd1L"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Version",
+              "value": "2021-07-28"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e2a98d84-802e-4638-a70d-b3a80fc025c7",
+      "name": "GHL Pipelines",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MunLcnbcZYsFSLsd",
+          "name": "GHL - EM"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://services.leadconnectorhq.com/locations/yLiKZKvk2CeI2ckIqd1L/customFields",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Version",
+              "value": "2021-07-28"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "116864da-f732-49b9-8370-5925f10957ff",
+      "name": "GHL Custom Fields",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        160
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MunLcnbcZYsFSLsd",
+          "name": "GHL - EM"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"openai/gpt-oss-120b\",\n  \"temperature\": 0,\n  \"response_format\": { \"type\": \"json_object\" },\n  \"messages\": [\n    { \"role\": \"system\", \"content\": \"Reply with JSON only.\" },\n    { \"role\": \"user\", \"content\": {{ JSON.stringify(\"Reply with this JSON: {\\\"ok\\\": true}\") }} }\n  ]\n}",
+        "options": {}
+      },
+      "id": "9f76d223-fda3-4eb3-9e4c-82bd36e07b3e",
+      "name": "Groq Test",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        304
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "rrqR33bsztVI6kaF",
+          "name": "Groq API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#recruiting-alerts",
+          "mode": "name"
+        },
+        "text": "n8n is connected ✅",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "id": "d18b80bb-4c32-4b60-aa88-48a364bfc546",
+      "name": "Slack Test",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        464
+      ],
+      "webhookId": "9ecb10fb-0ce9-4f23-8863-3d9063e03ca7",
+      "credentials": {
+        "slackApi": {
+          "id": "xibfTk4c2srud9JN",
+          "name": "Slack Copilot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "roles",
+        "returnAll": true
+      },
+      "id": "52587c24-67e5-4b7f-82ce-08ea821c999a",
+      "name": "Supabase Test",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        0,
+        608
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Run setup check": {
+      "main": [
+        [
+          {
+            "node": "GHL Pipelines",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "GHL Custom Fields",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Groq Test",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack Test",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Supabase Test",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "6cc32081-6137-4bfb-800e-33f0270e9ab5",
+  "meta": {
+    "instanceId": "c3005fb383106b154c0cabcf7e6068a406c213ecf488ca0f944eb6a0246db863"
+  },
+  "nodeGroups": [],
+  "id": "jZ4NKCIJHNdDjEjM",
+  "tags": []
+}

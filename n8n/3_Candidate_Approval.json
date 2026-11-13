@@ -1,0 +1,564 @@
+{
+  "name": "3 - Candidate Approval",
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "id": "73912f07-1d05-4bd0-af7d-1546780a33e8",
+      "name": "When Executed by Another Workflow",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1328,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"openai/gpt-oss-120b\",\n  \"temperature\": 0,\n  \"response_format\": { \"type\": \"json_object\" },\n  \"messages\": [\n    { \"role\": \"system\", \"content\": \"Write one friendly, professional sentence (at most 30 words) telling a candidate why their experience fits a remote role. Use only the facts given. Do not mention scores. Return only JSON in this shape: {\\\"intro\\\":\\\"\\\"}\" },\n    { \"role\": \"user\", \"content\": {{ JSON.stringify('Role: ' + $json.role_title + '. Facts: ' + $json.line1 + ' ' + $json.line2) }} }\n  ]\n}",
+        "options": {}
+      },
+      "id": "8b86b3df-d0e6-4432-a8bf-ab79de9856c6",
+      "name": "Write Intro",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1104,
+        112
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "rrqR33bsztVI6kaF",
+          "name": "Groq API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// ===== YOUR GHL SETTINGS: paste your own IDs between the quotes =====\nconst SETTINGS = {\n  location_id: 'yLiKZKvk2CeI2ckIqd1L',\n  pipeline_id: 'wVR2sMaNCvCdGXcDhm4L',\n  stage_shortlisted_id: '3b126dd8-78a4-4b9f-bc2e-c20a3acf19be',\n  field_role_title_id: 'UX73MimTInvctq96IIvX',\n  field_outreach_intro_id: 'l7bDtMlaaCR7ohP4hgHh',\n  tag: 'em-outreach-approved',\n  // TEST MODE ON: GHL gets your own Gmail +alias (e.g. elsymrad3+linahaddad@gmail.com),\n  // never the address written in the CV. Set to false only for real candidates.\n  test_mode: true,\n  test_inbox: 'elsymrad3',\n};\n// =====================================================================\nconst c = $('When Executed by Another Workflow').first().json;\nlet intro = '';\ntry { intro = JSON.parse($json.choices[0].message.content).intro || ''; } catch (e) {}\nconst slug = String(c.name || 'candidate').toLowerCase().replace(/[^a-z0-9]+/g, '');\nconst ghl_email = SETTINGS.test_mode ? `${SETTINGS.test_inbox}+${slug}@gmail.com` : c.email;\nconst [first_name, ...rest] = String(c.name || '').split(' ');\nreturn [{ json: { ...c, intro, ghl_email, first_name, last_name: rest.join(' '), settings: SETTINGS } }];"
+      },
+      "id": "e6f16236-191b-4ec4-98d0-67a546b38662",
+      "name": "Prepare",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -880,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "tableId": "shortlists",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "role_id",
+              "fieldValue": "={{ $json.role_id }}"
+            },
+            {
+              "fieldId": "candidate_id",
+              "fieldValue": "={{ $json.id }}"
+            },
+            {
+              "fieldId": "score",
+              "fieldValue": "={{ $json.score }}"
+            },
+            {
+              "fieldId": "reason",
+              "fieldValue": "={{ $json.line1 }} {{ $json.line2 }}"
+            },
+            {
+              "fieldId": "cv_file",
+              "fieldValue": "={{ $json.cv_file }}"
+            },
+            {
+              "fieldId": "approval_status",
+              "fieldValue": "Pending"
+            }
+          ]
+        }
+      },
+      "id": "8d443a6d-7bb3-4496-be88-98327b6e8095",
+      "name": "Save Shortlist",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -656,
+        112
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#recruiting-approvals",
+          "mode": "name"
+        },
+        "message": "=*{{ $('Prepare').item.json.role_code }} – {{ $('Prepare').item.json.role_title }}*\nCandidate: *{{ $('Prepare').item.json.name }}* | Score {{ $('Prepare').item.json.score }}/100\n{{ $('Prepare').item.json.line1 }}\n{{ $('Prepare').item.json.line2 }}\nSource CV: {{ $('Prepare').item.json.cv_file }}\nEmail intro: _{{ $('Prepare').item.json.intro }}_\n\nApprove = add to the GHL pipeline and start the email sequence. Reject = nothing is sent.",
+        "approvalOptions": {
+          "values": {
+            "approvalType": "double",
+            "disapproveLabel": "Reject"
+          }
+        },
+        "options": {}
+      },
+      "id": "1abb930f-8d3d-4625-bb54-b38b8cd23a95",
+      "name": "Ask Approval",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        -448,
+        112
+      ],
+      "webhookId": "89e997a9-cb39-4ae7-b7c0-97ece77c46e9",
+      "credentials": {
+        "slackApi": {
+          "id": "xibfTk4c2srud9JN",
+          "name": "Slack Copilot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "761cc5e4-3544-4c7e-b5ae-9b603daf0bee",
+              "leftValue": "={{ $json.data.approved === true }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "a7371b08-d45c-412d-91cf-e4b4ba3b62d2",
+      "name": "Approved?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -224,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "shortlists",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $('Save Shortlist').item.json.id }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "approval_status",
+              "fieldValue": "Approved"
+            }
+          ]
+        }
+      },
+      "id": "156f7045-f10c-49f7-98c9-39ba5b9123ec",
+      "name": "Mark Approved",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableId": "approvals",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "item_type",
+              "fieldValue": "candidate"
+            },
+            {
+              "fieldId": "item_id",
+              "fieldValue": "={{ $('Save Shortlist').item.json.id }}"
+            },
+            {
+              "fieldId": "decision",
+              "fieldValue": "Approved"
+            },
+            {
+              "fieldId": "decided_by",
+              "fieldValue": "Slack"
+            }
+          ]
+        }
+      },
+      "id": "1ab2de6c-a0ab-48e0-bcd0-3ddd66b41462",
+      "name": "Log Approval",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        224,
+        0
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "candidates",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $('Prepare').item.json.id }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "pipeline_stage",
+              "fieldValue": "Outreach Sent"
+            }
+          ]
+        }
+      },
+      "id": "2602f709-d9ab-49a4-813a-4630830cc6d0",
+      "name": "Set Stage",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        640,
+        0
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#recruiting-approvals",
+          "mode": "name"
+        },
+        "text": "=:white_check_mark: *{{ $('Prepare').item.json.name }}* approved for {{ $('Prepare').item.json.role_code }}. Added to GHL ({{ $('Prepare').item.json.ghl_email }}) and the email sequence has started.",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "id": "a01eece5-21d2-4d2d-a960-18f92d305f61",
+      "name": "Confirm Approval",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        832,
+        0
+      ],
+      "webhookId": "ff995955-3121-441e-acb1-1c80f7263905",
+      "credentials": {
+        "slackApi": {
+          "id": "xibfTk4c2srud9JN",
+          "name": "Slack Copilot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "shortlists",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $('Save Shortlist').item.json.id }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "approval_status",
+              "fieldValue": "Rejected"
+            }
+          ]
+        }
+      },
+      "id": "afb8dbbf-c9f3-4f1c-bceb-e39490b66843",
+      "name": "Mark Rejected",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        0,
+        224
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableId": "approvals",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "item_type",
+              "fieldValue": "candidate"
+            },
+            {
+              "fieldId": "item_id",
+              "fieldValue": "={{ $('Save Shortlist').item.json.id }}"
+            },
+            {
+              "fieldId": "decision",
+              "fieldValue": "Rejected"
+            },
+            {
+              "fieldId": "decided_by",
+              "fieldValue": "Slack"
+            }
+          ]
+        }
+      },
+      "id": "16c7dc6c-c97a-40c0-b82a-261f09c1048d",
+      "name": "Log Rejection",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        224,
+        224
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://services.leadconnectorhq.com/hooks/yLiKZKvk2CeI2ckIqd1L/webhook-trigger/7f2366c2-b221-4bfa-b70a-c18bfb13d57d",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ first_name: $('Prepare').item.json.first_name, last_name: $('Prepare').item.json.last_name, email: $('Prepare').item.json.ghl_email, role_title: $('Prepare').item.json.role_title, intro: $('Prepare').item.json.intro, role_code: $('Prepare').item.json.role_code, score: $('Prepare').item.json.score, cv_file: $('Prepare').item.json.cv_file }) }}",
+        "options": {}
+      },
+      "id": "144ea1be-3272-4310-8c79-61b3b734a768",
+      "name": "Send To GHL",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        448,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Write Intro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write Intro": {
+      "main": [
+        [
+          {
+            "node": "Prepare",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare": {
+      "main": [
+        [
+          {
+            "node": "Save Shortlist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Shortlist": {
+      "main": [
+        [
+          {
+            "node": "Ask Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ask Approval": {
+      "main": [
+        [
+          {
+            "node": "Approved?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Approved?": {
+      "main": [
+        [
+          {
+            "node": "Mark Approved",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mark Rejected",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Approved": {
+      "main": [
+        [
+          {
+            "node": "Log Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Approval": {
+      "main": [
+        [
+          {
+            "node": "Send To GHL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Stage": {
+      "main": [
+        [
+          {
+            "node": "Confirm Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Rejected": {
+      "main": [
+        [
+          {
+            "node": "Log Rejection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send To GHL": {
+      "main": [
+        [
+          {
+            "node": "Set Stage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "501ce650-7ef8-419b-ac74-6cec9af4b12a",
+  "meta": {
+    "instanceId": "c3005fb383106b154c0cabcf7e6068a406c213ecf488ca0f944eb6a0246db863"
+  },
+  "nodeGroups": [],
+  "id": "6Ue0rWVw583UB3Uj",
+  "tags": []
+}

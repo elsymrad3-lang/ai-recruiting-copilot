@@ -1,0 +1,399 @@
+{
+  "name": "4 - Ask Copilot",
+  "nodes": [
+    {
+      "parameters": {
+        "trigger": [
+          "app_mention"
+        ],
+        "watchWorkspace": true,
+        "options": {}
+      },
+      "id": "19ae7850-8f4c-422b-8ef3-ff2f460aa9f2",
+      "name": "Slack Mention",
+      "type": "n8n-nodes-base.slackTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1536,
+        208
+      ],
+      "webhookId": "676cfd14-af35-405c-bdcb-797fd856dc0c",
+      "credentials": {
+        "slackApi": {
+          "id": "xibfTk4c2srud9JN",
+          "name": "Slack Copilot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const e = $json.event || $json;\nconst raw = String(e.text || '').replace(/<@[^>]+>/g, '').trim();\nconst m = raw.match(/R-\\d{3}/i);\nconst question = raw.replace(/R-\\d{3}/i, '').replace(/^[\\s:,-]+/, '').trim();\nreturn [{ json: { question: question || raw, role_code: m ? m[0].toUpperCase() : '',\n                  channel: e.channel, ts: e.thread_ts || e.ts } }];"
+      },
+      "id": "c4cf2e16-f647-4716-a22a-088c931a29da",
+      "name": "Clean Question",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1328,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "qMjuxsMkM1OWrHFO",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/qMjuxsMkM1OWrHFO",
+          "cachedResultName": "2 - Find Candidates"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "817172b7-02e6-494c-93cf-f9aea48334cb",
+      "name": "Find Candidates",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        -1104,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "={{ $('Clean Question').item.json.channel }}",
+          "mode": "id"
+        },
+        "text": "={{ $('Find Candidates').item.json.text }}{{ !$('Clean Question').item.json.role_code && $('Find Candidates').item.json.found ? '\\n\\n_Tip: add a role code such as R-001 to your question to send these candidates for approval._' : '' }}",
+        "otherOptions": {
+          "includeLinkToWorkflow": false,
+          "thread_ts": {
+            "replyValues": {
+              "thread_ts": "={{ $('Clean Question').item.json.ts }}"
+            }
+          }
+        }
+      },
+      "id": "96eef17b-e1c1-4bfa-9c88-484a8a0a794b",
+      "name": "Reply In Thread",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        -880,
+        208
+      ],
+      "webhookId": "0b492751-a3a4-433c-9ed1-dfe9757d4032",
+      "credentials": {
+        "slackApi": {
+          "id": "xibfTk4c2srud9JN",
+          "name": "Slack Copilot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "784d82f2-e239-427a-ad3b-7f56cab7d669",
+              "leftValue": "={{ !!$('Clean Question').item.json.role_code && $('Find Candidates').item.json.found === true }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "955131b3-24f4-4847-9efd-46997522b84c",
+      "name": "Role Code Given?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -656,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "roles",
+        "returnAll": true,
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "code",
+              "condition": "eq",
+              "keyValue": "={{ $('Clean Question').item.json.role_code }}"
+            }
+          ]
+        }
+      },
+      "id": "292befb6-dfeb-4d5b-a0ca-9dfac64d07a2",
+      "name": "Get Role",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        112
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8a71bdf4-517c-45f5-95de-92afe1e3678d",
+              "leftValue": "={{ $json.status === 'Open' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "5b04c3c0-55a3-4a65-a658-f544166ce515",
+      "name": "Role Open?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -224,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// One item per approved-for-review candidate, with the role attached\nconst role = $('Get Role').first().json;\nreturn $('Find Candidates').first().json.candidates.map(c => ({\n  json: { ...c, role_id: role.id, role_code: role.code, role_title: role.title },\n}));"
+      },
+      "id": "4625ee1e-9bd7-4d25-a544-b7e3e40466f1",
+      "name": "Make Approval Items",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "6Ue0rWVw583UB3Uj",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/6Ue0rWVw583UB3Uj",
+          "cachedResultName": "3 - Candidate Approval"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "id": "b7690bbb-794f-4090-ada4-ff6a19fe8c4b",
+      "name": "Send To Approval",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "={{ $('Clean Question').item.json.channel }}",
+          "mode": "id"
+        },
+        "text": "=Role {{ $('Clean Question').item.json.role_code }} is not open (status: {{ $json.status || 'not found' }}). Approve its job description first, then ask again.",
+        "otherOptions": {
+          "includeLinkToWorkflow": false,
+          "thread_ts": {
+            "replyValues": {
+              "thread_ts": "={{ $('Clean Question').item.json.ts }}"
+            }
+          }
+        }
+      },
+      "id": "c43a86c9-ce4b-4ee0-b5f4-a442d450538b",
+      "name": "Reply Role Not Open",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        208
+      ],
+      "webhookId": "8cac5a97-a7ae-4c9a-a0f0-fe981a2dba32",
+      "credentials": {
+        "slackApi": {
+          "id": "xibfTk4c2srud9JN",
+          "name": "Slack Copilot"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Slack Mention": {
+      "main": [
+        [
+          {
+            "node": "Clean Question",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Clean Question": {
+      "main": [
+        [
+          {
+            "node": "Find Candidates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Candidates": {
+      "main": [
+        [
+          {
+            "node": "Reply In Thread",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reply In Thread": {
+      "main": [
+        [
+          {
+            "node": "Role Code Given?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Role Code Given?": {
+      "main": [
+        [
+          {
+            "node": "Get Role",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Role": {
+      "main": [
+        [
+          {
+            "node": "Role Open?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Role Open?": {
+      "main": [
+        [
+          {
+            "node": "Make Approval Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Reply Role Not Open",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make Approval Items": {
+      "main": [
+        [
+          {
+            "node": "Send To Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "b4079888-a570-472a-b17d-a041d4e4cde1",
+  "meta": {
+    "instanceId": "c3005fb383106b154c0cabcf7e6068a406c213ecf488ca0f944eb6a0246db863"
+  },
+  "nodeGroups": [],
+  "id": "V8bvZKjynNz0IPji",
+  "tags": []
+}

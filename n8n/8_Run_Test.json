@@ -1,0 +1,260 @@
+{
+  "name": "8 - Run Test",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "3ff00962-66d7-4850-ac8f-8bce4c339a77",
+      "name": "Run Test",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// The 10 test questions and their right answers (from test_questions.json)\nconst QUESTIONS = [\n  {\n    \"question\": \"Which QuickBooks bookkeepers are Certified QuickBooks ProAdvisors with at least 5 years of bookkeeping experience?\",\n    \"expected\": [\n      \"Imran Siddiqui\",\n      \"Ma. Teresa Gonzaga\",\n      \"Rowena Castillo\"\n    ]\n  },\n  {\n    \"question\": \"Find GoHighLevel specialists with 3+ years of GHL experience who speak Arabic.\",\n    \"expected\": [\n      \"Karim Abdelrahman\",\n      \"Lina Haddad\",\n      \"Rami Khoury\",\n      \"Youssef Benali\"\n    ]\n  },\n  {\n    \"question\": \"Which customer support agents have worked with Gorgias on a Shopify store?\",\n    \"expected\": [\n      \"Ahmed Shalaby\",\n      \"Fernanda Lima\",\n      \"Paolo Navarro\"\n    ]\n  },\n  {\n    \"question\": \"Find a bookkeeper who is a licensed CPA with 8+ years of NetSuite experience.\",\n    \"expected\": \"NO_MATCH\"\n  },\n  {\n    \"question\": \"Who has 3+ years of GoHighLevel and also builds automations in Make.com (Integromat)?\",\n    \"expected\": [\n      \"Bilal Qureshi\",\n      \"Joanna Dimaculangan\",\n      \"Lina Haddad\"\n    ]\n  },\n  {\n    \"question\": \"Which social media managers edit video in CapCut and have run TikTok Ads campaigns?\",\n    \"expected\": [\n      \"Daniela Quintero\",\n      \"Hiba Saad\",\n      \"Nicole Dela Cruz\"\n    ]\n  },\n  {\n    \"question\": \"Which customer support agents have used Kustomer?\",\n    \"expected\": [\n      \"Aisha Rahman\",\n      \"Omar Haddadin\"\n    ]\n  },\n  {\n    \"question\": \"Who has migrated clients from Keap (Infusionsoft) to GoHighLevel?\",\n    \"expected\": \"NO_MATCH\"\n  },\n  {\n    \"question\": \"Which executive virtual assistants have worked directly for a CEO or founder and handle travel booking?\",\n    \"expected\": [\n      \"Camila Ortega\",\n      \"Hannah Mwangi\",\n      \"Kristine Joy Bautista\"\n    ]\n  },\n  {\n    \"question\": \"Find a GoHighLevel specialist who is fluent in German.\",\n    \"expected\": \"NO_MATCH\"\n  }\n];\nreturn QUESTIONS.map(q => ({ json: { ...q, role_code: '' } }));"
+      },
+      "id": "a0492898-3eb7-4fde-bec7-0f4769264a33",
+      "name": "Questions",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -32,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "qMjuxsMkM1OWrHFO",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/qMjuxsMkM1OWrHFO",
+          "cachedResultName": "2 - Find Candidates"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "77ffdced-1f7d-41dd-a1cd-545e2da2ca96",
+      "name": "Find Candidates",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        512,
+        352
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const qs = $('Questions').all().map(i => i.json);\nconst runAt = new Date().toISOString();\nreturn $input.all().map((it, i) => {\n  const q = qs[i], r = it.json;\n  const got = (r.candidates || []).map(c => String(c.name).toLowerCase().trim()).sort();\n  const exp = q.expected === 'NO_MATCH' ? [] : q.expected.map(n => n.toLowerCase().trim()).sort();\n  const passed = JSON.stringify(got) === JSON.stringify(exp) && (r.candidates || []).every(c => c.cv_file);\n  return { json: {\n    question: q.question,\n    expected: q.expected === 'NO_MATCH' ? 'No good match' : q.expected.join(', '),\n    bot_answer: r.text || '',\n    passed,\n    run_at: runAt,\n  } };\n});"
+      },
+      "id": "65b7487e-c817-48f8-928b-cbe619d0bc25",
+      "name": "Grade",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "tableId": "test_results",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "question",
+              "fieldValue": "={{ $json.question }}"
+            },
+            {
+              "fieldId": "expected",
+              "fieldValue": "={{ $json.expected }}"
+            },
+            {
+              "fieldId": "bot_answer",
+              "fieldValue": "={{ $json.bot_answer }}"
+            },
+            {
+              "fieldId": "passed",
+              "fieldValue": "={{ $json.passed }}"
+            },
+            {
+              "fieldId": "run_at",
+              "fieldValue": "={{ $json.run_at }}"
+            }
+          ]
+        }
+      },
+      "id": "77d77a1d-1b08-48d2-b206-b059f08e42df",
+      "name": "Save Result",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        880,
+        0
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $('Grade').all().map(i => i.json);\nreturn [{ json: { score: `${rows.filter(r => r.passed).length} / ${rows.length}`,\n                  failed: rows.filter(r => !r.passed).map(r => r.question) } }];"
+      },
+      "id": "89a5a89d-7d58-41c5-93e2-8f1082c1e328",
+      "name": "Score Out Of 10",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1104,
+        0
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        176,
+        272
+      ],
+      "id": "3f95ad77-7ca6-4b1a-aa85-896b614d82df",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        688,
+        352
+      ],
+      "id": "f7ad4aef-bb40-40fa-ac85-d60db6313ab7",
+      "name": "Wait",
+      "webhookId": "23cebee2-e6b1-4089-a1a0-fcf7ebb1ffa2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Run Test": {
+      "main": [
+        [
+          {
+            "node": "Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Questions": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Candidates": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Grade": {
+      "main": [
+        [
+          {
+            "node": "Save Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Result": {
+      "main": [
+        [
+          {
+            "node": "Score Out Of 10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Grade",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Find Candidates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 900,
+    "availableInMCP": false
+  },
+  "versionId": "bf9ac8bc-ac92-4ca6-9ca0-eb8aa5e8c3a6",
+  "meta": {
+    "instanceId": "c3005fb383106b154c0cabcf7e6068a406c213ecf488ca0f944eb6a0246db863"
+  },
+  "nodeGroups": [],
+  "id": "h4RmJNdzRxHH4QyX",
+  "tags": []
+}

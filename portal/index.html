@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recruiting Copilot Portal</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1d2330; --muted: #667085; --line: #e4e7ec;
+    --accent: #2f5bea; --ok: #157f3b; --ok-bg: #e7f6ec; --warn: #a15c07; --warn-bg: #fdf3e2;
+    --bad: #b42318; --bad-bg: #fdecea; --info-bg: #eaf0fd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151b; --card: #1b2029; --text: #e6e9ef; --muted: #9aa3b2; --line: #2c3340;
+      --accent: #7c9cff; --ok: #6fd69a; --ok-bg: #173324; --warn: #f2b45a; --warn-bg: #3a2c14;
+      --bad: #ff8a80; --bad-bg: #3d1d1b; --info-bg: #1d2a47;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 20px 16px 0; max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 16px; font-size: 14px; }
+  nav { display: flex; gap: 6px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  nav button { border: 0; background: none; color: var(--muted); font: inherit; font-weight: 600;
+               padding: 10px 14px; border-bottom: 3px solid transparent; cursor: pointer; white-space: nowrap; }
+  nav button.active { color: var(--accent); border-bottom-color: var(--accent); }
+  main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+  .badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 999px; }
+  .b-ok { color: var(--ok); background: var(--ok-bg); }
+  .b-warn { color: var(--warn); background: var(--warn-bg); }
+  .b-bad { color: var(--bad); background: var(--bad-bg); }
+  .b-info { color: var(--accent); background: var(--info-bg); }
+  .muted { color: var(--muted); font-size: 13px; }
+  details summary { cursor: pointer; color: var(--accent); font-size: 14px; margin-top: 8px; }
+  pre { white-space: pre-wrap; font: inherit; font-size: 14px; margin: 8px 0 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 6px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; border-top: 0; }
+  .table-wrap { overflow-x: auto; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+  .stat b { display: block; font-size: 24px; }
+  .board { display: grid; grid-template-columns: repeat(7, minmax(170px, 1fr)); gap: 10px; overflow-x: auto; padding-bottom: 6px; }
+  .col { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px; min-height: 120px; }
+  .col h3 { font-size: 13px; margin: 0 0 8px; display: flex; justify-content: space-between; }
+  .pill { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; margin-bottom: 6px; font-size: 13px; }
+  .score { font-size: 40px; font-weight: 700; }
+  .empty { color: var(--muted); font-style: italic; }
+  .error { color: var(--bad); }
+  @media (max-width: 640px) { .board { grid-template-columns: repeat(7, 75vw); } td, th { padding: 6px 4px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Recruiting Copilot</h1>
+  <p class="sub">Live view of roles, shortlists, the candidate pipeline and the bot's test score. Read only.
+    <span id="updated"></span></p>
+  <nav>
+    <button data-tab="roles" class="active">Open Roles</button>
+    <button data-tab="pipeline">Pipeline</button>
+    <button data-tab="test">Test</button>
+  </nav>
+</header>
+<main>
+  <section id="roles"></section>
+  <section id="pipeline" hidden></section>
+  <section id="test" hidden></section>
+</main>
+
+<script>
+// ===== Paste your Supabase anon (publishable) key below. NEVER the service_role key. =====
+const SUPABASE_URL = 'https://bycryzviladbhztolnvb.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_QGxbuHs2a6eENucTfSWMTQ_qAxKf9cn';
+// ===========================================================================================
+
+const STAGES = ['Shortlisted', 'Outreach Sent', 'Replied', 'Screening', 'Submitted to Client', 'Placed', 'Not a Fit'];
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const badge = (text, kind) => `<span class="badge b-${kind}">${esc(text)}</span>`;
+const statusKind = s => ({ Open: 'ok', Approved: 'ok', Draft: 'warn', Pending: 'warn', Rejected: 'bad', Closed: 'bad' }[s] || 'info');
+// Slack formatting (*bold*, \n) -> plain text
+const plain = s => String(s || '').replace(/\*/g, '').trim();
+
+async function load(table, select = '*', order) {
+  let q = db.from(table).select(select);
+  if (order) q = q.order(order.col, { ascending: order.asc });
+  const { data, error } = await q;
+  if (error) throw new Error(`${table}: ${error.message}`);
+  return data;
+}
+
+function renderRoles(roles, shortlists) {
+  const order = { Open: 0, Draft: 1, Rejected: 2, Closed: 3 };
+  roles.sort((a, b) => (order[a.status] ?? 9) - (order[b.status] ?? 9) || a.id - b.id);
+  const el = document.getElementById('roles');
+  if (!roles.length) { el.innerHTML = '<div class="card empty">No roles yet.</div>'; return; }
+  el.innerHTML = roles.map(r => {
+    // a candidate proposed more than once for a role: keep only the latest proposal
+    const latest = new Map();
+    shortlists.filter(s => s.role_id === r.id).sort((a, b) => a.id - b.id).forEach(s => latest.set(s.candidate_id, s));
+    const list = [...latest.values()].sort((a, b) => b.score - a.score);
+    const rows = list.length
+      ? `<div class="table-wrap"><table><thead><tr><th>Candidate</th><th>Score</th><th>Why (from the CV)</th><th>Source CV</th><th>Approval</th></tr></thead><tbody>${
+          list.map(s => `<tr><td>${esc(s.candidates?.full_name)}</td><td>${esc(s.score)}</td><td>${esc(s.reason)}</td>
+            <td class="muted">${esc(s.cv_file)}</td><td>${badge(s.approval_status, statusKind(s.approval_status))}</td></tr>`).join('')
+        }</tbody></table></div>`
+      : `<p class="empty">${r.status === 'Open' ? 'No good match yet: no candidates have been shortlisted for this role.' : 'No shortlist (role not open).'}</p>`;
+    return `<div class="card">
+      <div class="row"><div><b>${esc(r.code)} · ${esc(r.title)}</b><div class="muted">${esc(r.client)}</div></div>
+        ${badge(r.status === 'Draft' ? 'Awaiting approval' : r.status, statusKind(r.status))}</div>
+      <details><summary>Job description</summary><pre>${esc(plain(r.jd_text))}</pre></details>
+      <h4 style="margin:14px 0 4px">Shortlist</h4>${rows}</div>`;
+  }).join('');
+}
+
+function renderPipeline(candidates, files) {
+  const el = document.getElementById('pipeline');
+  const flagged = files.filter(f => f.status === 'unreadable' || f.status === 'needs_review');
+  const count = st => files.filter(f => f.status === st).length;
+  const stats = [['Candidates', candidates.length], ['CV files', files.length], ['Active CVs', count('active')],
+    ['Duplicates', count('duplicate')], ['Replaced (older)', count('replaced')], ['Flagged', flagged.length]];
+  const flaggedHtml = flagged.length
+    ? `<div class="table-wrap"><table><thead><tr><th>File</th><th>Status</th><th>Reason</th></tr></thead><tbody>${
+        flagged.map(f => `<tr><td>${esc(f.file_name)}</td><td>${badge(f.status === 'unreadable' ? 'Unreadable' : 'Needs review', 'bad')}</td><td>${esc(f.reason)}</td></tr>`).join('')
+      }</tbody></table></div>`
+    : '<p class="empty">No flagged CVs.</p>';
+  const cols = STAGES.map(st => {
+    const people = candidates.filter(c => (c.pipeline_stage || '').toLowerCase() === st.toLowerCase());
+    return `<div class="col"><h3><span>${esc(st)}</span><span class="muted">${people.length}</span></h3>${
+      people.map(c => `<div class="pill">${esc(c.full_name)}<div class="muted">${esc(c.active_cv_file)}</div></div>`).join('') || '<div class="muted">—</div>'
+    }</div>`;
+  }).join('');
+  el.innerHTML = `<div class="stats">${stats.map(([k, v]) => `<div class="stat"><span class="muted">${k}</span><b>${v}</b></div>`).join('')}</div>
+    <div class="card"><b>CVs that need a human</b><p class="muted">These files could not be searched (for example a scanned image) or clash with another person.</p>${flaggedHtml}</div>
+    <div class="board">${cols}</div>`;
+}
+
+function botNames(answer) {
+  const a = plain(answer);
+  if (/^no good match/i.test(a)) return 'No good match';
+  const names = [...a.matchAll(/^\s*\d+\.\s*(.+?)\s*\|/gm)].map(m => m[1]);
+  return names.length ? names.join(', ') : a.slice(0, 200);
+}
+
+function renderTest(results) {
+  const el = document.getElementById('test');
+  if (!results.length) { el.innerHTML = '<div class="card empty">No test run yet. Run "8 - Run Test" in n8n.</div>'; return; }
+  const latest = results.reduce((m, r) => (r.run_at > m ? r.run_at : m), results[0].run_at);
+  const run = results.filter(r => r.run_at === latest).sort((a, b) => a.id - b.id);
+  const passed = run.filter(r => r.passed).length;
+  el.innerHTML = `<div class="card row"><div><span class="muted">Bot score (latest run)</span>
+      <div class="score">${passed} / ${run.length}</div></div>
+      <div class="muted">Run on ${esc(new Date(latest).toLocaleString())}</div></div>
+    <div class="card table-wrap"><table><thead><tr><th>#</th><th>Question</th><th>Right answer</th><th>Bot's answer</th><th>Result</th></tr></thead><tbody>${
+      run.map((r, i) => `<tr><td>${i + 1}</td><td>${esc(r.question)}</td><td>${esc(r.expected)}</td>
+        <td>${esc(botNames(r.bot_answer))}</td><td>${r.passed ? badge('Pass', 'ok') : badge('Fail', 'bad')}</td></tr>`).join('')
+    }</tbody></table></div>`;
+}
+
+async function refresh() {
+  try {
+    const [roles, shortlists, candidates, files, results] = await Promise.all([
+      load('roles', 'id, code, client, title, jd_text, status'),
+      load('shortlists', 'id, role_id, candidate_id, score, reason, cv_file, approval_status, candidates(full_name)'),
+      load('candidates', 'id, full_name, pipeline_stage, active_cv_file', { col: 'full_name', asc: true }),
+      load('cv_files', 'id, file_name, status, reason'),
+      load('test_results', 'id, question, expected, bot_answer, passed, run_at'),
+    ]);
+    renderRoles(roles, shortlists);
+    renderPipeline(candidates, files);
+    renderTest(results);
+    document.getElementById('updated').textContent = `Updated ${new Date().toLocaleTimeString()}.`;
+  } catch (e) {
+    document.getElementById('roles').innerHTML =
+      `<div class="card error">Could not load data: ${esc(e.message)}. Check the anon key in index.html.</div>`;
+  }
+}
+
+document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav button').forEach(x => x.classList.toggle('active', x === b));
+  document.querySelectorAll('main section').forEach(s => { s.hidden = s.id !== b.dataset.tab; });
+}));
+refresh();
+setInterval(refresh, 60000);
+</script>
+</body>
+</html>

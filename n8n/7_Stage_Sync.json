@@ -1,0 +1,264 @@
+{
+  "name": "7 - Stage Sync",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "id": "11075323-35b1-4734-ba79-da578466f199",
+      "name": "Every 15 Minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// ===== paste your EM - Candidate Pipeline ID between the quotes =====\nreturn [{ json: { location_id: 'yLiKZKvk2CeI2ckIqd1L', pipeline_id: 'wVR2sMaNCvCdGXcDhm4L' } }];"
+      },
+      "id": "ae8fc287-c9e1-4e07-925e-aa1c65ea9fcd",
+      "name": "Settings",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://services.leadconnectorhq.com/opportunities/pipelines",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "locationId",
+              "value": "={{ $json.location_id }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Version",
+              "value": "2021-07-28"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5889576b-917b-494f-8306-53165f93eff9",
+      "name": "Get Pipelines",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        448,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MunLcnbcZYsFSLsd",
+          "name": "GHL - EM"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://services.leadconnectorhq.com/opportunities/search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "location_id",
+              "value": "={{ $('Settings').first().json.location_id }}"
+            },
+            {
+              "name": "pipeline_id",
+              "value": "={{ $('Settings').first().json.pipeline_id }}"
+            },
+            {
+              "name": "limit",
+              "value": "100"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Version",
+              "value": "2021-07-28"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d7b9fcb2-d92f-4582-8d6d-11c46c5fbc43",
+      "name": "Get Opportunities",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        672,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "MunLcnbcZYsFSLsd",
+          "name": "GHL - EM"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const S = $('Settings').first().json;\nconst pipe = ($('Get Pipelines').first().json.pipelines || []).find(p => p.id === S.pipeline_id);\nif (!pipe) throw new Error('Pipeline not found: paste your EM - Candidate Pipeline ID in the Settings node');\nconst names = Object.fromEntries(pipe.stages.map(s => [s.id, s.name]));\nreturn ($json.opportunities || [])\n  .filter(o => o.contact && o.contact.name && names[o.pipelineStageId])\n  .map(o => ({ json: { name: o.contact.name, stage: names[o.pipelineStageId] } }));"
+      },
+      "id": "95368c11-1785-43bb-85c2-d71d46805701",
+      "name": "Map Stages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "candidates",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "full_name",
+              "condition": "ilike",
+              "keyValue": "={{ $json.name }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "pipeline_stage",
+              "fieldValue": "={{ $json.stage }}"
+            }
+          ]
+        }
+      },
+      "id": "76070f65-4586-4ce9-8839-67fa0854d57d",
+      "name": "Update Stage",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        1104,
+        0
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Every 15 Minutes": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings": {
+      "main": [
+        [
+          {
+            "node": "Get Pipelines",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Pipelines": {
+      "main": [
+        [
+          {
+            "node": "Get Opportunities",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Opportunities": {
+      "main": [
+        [
+          {
+            "node": "Map Stages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Map Stages": {
+      "main": [
+        [
+          {
+            "node": "Update Stage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "77a91556-1a03-4785-a7c7-db2c00db5d6b",
+  "meta": {
+    "instanceId": "c3005fb383106b154c0cabcf7e6068a406c213ecf488ca0f944eb6a0246db863"
+  },
+  "nodeGroups": [],
+  "id": "NGVgY5Joz6sDR4b1",
+  "tags": []
+}

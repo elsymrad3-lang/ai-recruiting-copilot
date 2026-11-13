@@ -1,0 +1,158 @@
+{
+  "name": "6 - Reply Handler",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ghl-reply",
+        "options": {}
+      },
+      "id": "aa05368b-c2a8-404a-9782-54211f52fb89",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "5d966355-1757-42a2-ba3c-1871aa43a4d4"
+    },
+    {
+      "parameters": {
+        "jsCode": "// GHL sends the contact's details in the body\nconst b = $json.body || {};\nconst name = b.full_name || [b.first_name, b.last_name].filter(Boolean).join(' ') || (b.contact && b.contact.name) || '';\nreturn [{ json: { name, email: b.email || '' } }];"
+      },
+      "id": "a4414e28-b15d-402a-8843-7e17f8bf8c50",
+      "name": "Read Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "candidates",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "full_name",
+              "condition": "ilike",
+              "keyValue": "={{ $json.name }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "pipeline_stage",
+              "fieldValue": "Replied"
+            },
+            {
+              "fieldId": "updated_at",
+              "fieldValue": "={{ $now.toISO() }}"
+            }
+          ]
+        }
+      },
+      "id": "6bea4b63-73b4-465a-b3dc-4154ddc295f2",
+      "name": "Mark Replied",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        448,
+        0
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "TdhVA0PuKtKcDes6",
+          "name": "Supabase - Recruiting"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "#recruiting-approvals",
+          "mode": "name"
+        },
+        "text": "=:incoming_envelope: *{{ $('Read Reply').item.json.name }}* ({{ $('Read Reply').item.json.email }}) replied to the outreach email. The sequence stopped automatically and the GHL stage is now *Replied*.",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "id": "d45ed7a6-812b-4f99-b084-7fed4a7c098d",
+      "name": "Alert Reply",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        672,
+        0
+      ],
+      "executeOnce": true,
+      "webhookId": "0012a77a-c45e-4f4a-b0f8-9eea78778179",
+      "credentials": {
+        "slackApi": {
+          "id": "xibfTk4c2srud9JN",
+          "name": "Slack Copilot"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Read Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Reply": {
+      "main": [
+        [
+          {
+            "node": "Mark Replied",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Replied": {
+      "main": [
+        [
+          {
+            "node": "Alert Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "98149a2b-522f-4fd5-b25f-7be43f0256d7",
+  "meta": {
+    "instanceId": "c3005fb383106b154c0cabcf7e6068a406c213ecf488ca0f944eb6a0246db863"
+  },
+  "nodeGroups": [],
+  "id": "P3ZUJWEaz61PvOhy",
+  "tags": []
+}

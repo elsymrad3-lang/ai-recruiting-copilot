@@ -1,0 +1,42 @@
+Kettle & Kite Home Goods -- intake call (transcribed)
+On the call: Sam Okafor (Head of CX), Maya (recruiting)
+Role: Customer Support Agent x2
+---------------------------------------------------------
+
+[0:00] Sam: Hey, hey. Can you hear me? My headset's being weird.
+[0:03] Maya: I can hear you fine.
+[0:05] Sam: Okay great. Great. So, yeah, so we need support agents. Two of them, actually. Maybe three. Let's say two for now.
+[0:12] Maya: Two agents. Tell me about the store.
+[0:14] Sam: So we sell, um, home goods, kitchen stuff, kettles obviously [laughs], linens, candles. All on Shopify. And Q4 is coming, so tickets are gonna, like, triple.
+[0:26] Maya: What helpdesk do you use?
+[0:28] Sam: Zendesk. We've been on Zendesk for years, so ideally someone who knows Zendesk, macros, views, all that.
+[0:35] Maya: Okay, Zendesk experience.
+[0:37] Sam: Yeah. And, uh, Shopify, they need to know how to look up orders, do refunds, edit addresses, that stuff.
+[0:44] Maya: Shopify admin, refunds, order edits. Channels?
+[0:48] Sam: Email and chat mostly. No phone. Thank God. [laughs] Well, maybe phone later, I don't know.
+[0:54] Maya: Email and live chat. Ticket volume?
+[0:57] Sam: Right now each agent does maybe sixty, seventy a day. In Q4 it's gonna be more.
+[1:03] Maya: Okay. Languages?
+[1:05] Sam: English. We ship to Canada too, so French would be, you know, nice, but not needed.
+[1:11] Maya: French a plus. Experience level?
+[1:14] Sam: A year or more in e-commerce support. Doesn't need to be a lot.
+[1:18] Maya: Okay.
+[1:19] Sam: Oh, wait, actually, ugh, I forgot. So, um, we're switching. We signed with Gorgias like two weeks ago. We're migrating off Zendesk in, like, November. So, yeah, forget Zendesk. Gorgias. Gorgias plus Shopify is what matters. If they've done Gorgias already, that's huge, because I don't have time to train people on a new tool and also train them on our products.
+[1:39] Maya: So Gorgias instead of Zendesk.
+[1:41] Sam: Gorgias instead of Zendesk. Zendesk doesn't matter anymore. I mean, it doesn't hurt, but, Gorgias.
+[1:47] Maya: Got it. Shift?
+[1:49] Sam: Um, that's... we haven't decided. We might do one person on US morning and one on US evening, or both same shift, I need to talk to the team. TBD.
+[1:58] Maya: Shift TBD. Full-time?
+[2:00] Sam: Full-time yes.
+[2:02] Maya: And pay?
+[2:04] Sam: Ahh. Yeah. So finance is redoing the budget for next year, I genuinely can't give you a number today. I'll email you once they approve headcount. Should be next week? Hopefully.
+[2:15] Maya: Okay, pay pending finance approval.
+[2:18] Sam: Yeah, sorry.
+[2:19] Maya: No worries. Start date?
+[2:21] Sam: Before Black Friday. Like, they need to be trained by mid-November. [inaudible] ...two weeks of training.
+[2:28] Maya: Okay. So: two Customer Support Agents, Gorgias plus Shopify, email and chat, 1+ year e-commerce support, French a plus, full-time, shift and pay TBD, start before mid-November.
+[2:40] Sam: Yes. That's exactly it. Thank you.
+[2:42] Maya: Talk soon, Sam.
+[2:43] Sam: Bye!
+---------------------------------------------------------
+[auto-transcript end]
